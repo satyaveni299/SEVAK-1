@@ -1,0 +1,1520 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.back-button-welcome {
+    background-color: white;
+    color: Orange;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.tag-line {
+    font-weight: bold;
+
+}
+
+.welcome-bg-container {
+    background-image: url('https://bvscanada.com/images/Construction/BVS-Canada-worker-construction-intro.jpg');
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.sevak-title {
+    margin-top: 170px;
+    color: white;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#header p {
+    font-size: 2.6rem;
+    /* Increased font size */
+    margin-bottom: 20px;
+    color: #fff;
+    /* Changed tagline color to white */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 60px;
+    width: 200px;
+    font-size: 25px;
+    border-radius: 9px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff6f00;
+}
+
+.container-feature-welcome {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.features-welcome {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+
+}
+
+.feature-welcome {
+    flex: 0 0 45%;
+    padding: 20px;
+    background-color: #ffeeda;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 100px;
+    margin: 22px;
+}
+
+.feature h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #343a40;
+
+}
+
+.feature p {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.login-body {
+    background: linear-gradient(45deg, #ffa089, #e48400);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-buttonlogin {
+    background-color: #ec5800;
+    /* Blue background color */
+    color: white;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.back-button:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.back-button::before {
+    content: "\2190";
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.container {
+    animation: fadeIn 1s ease-out;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-heading {
+    font-family: "Roboto";
+    font-size: 46px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-family: "Roboto";
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.input-bar {
+    width: 100%;
+    height: 41px;
+    border: 1px solid #95a5a6;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.input-bar:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px #3498db;
+    transform: scale(1.02);
+    /* Slightly larger on focus */
+}
+
+.name-email {
+    font-size: 22px;
+    color: #34495e;
+}
+
+.input-container {
+    text-align: left;
+}
+
+.login-btn {
+    width: 80%;
+    height: 36px;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 30px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(45deg, #f39c12, #e67e22, #d35400);
+    /* Shining effect with different shades */
+    transform: scale(1.05);
+    /* Slightly larger on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add a subtle box-shadow on hover */
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.apply-body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.job-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.details-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.details-text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.apply-button {
+    background-color: #f94d00;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.apply-button:hover {
+    background-color: #ff7f50;
+}
+
+.back-button {
+    background-color: #f94d00;
+    /* Blue background color */
+    color: #fff;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.back-button:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.back-button::before {
+    content: "\2190";
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.title-body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #333, #222, #333);
+    color: #fff;
+    overflow: hidden;
+
+}
+
+.button-title {
+    background-color: #fff;
+    /* Blue background color */
+    color: #ff7f50;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.button-title:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.button-title::before {
+
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.title-background {
+    background: linear-gradient(45deg, #ffcc00, #ff0066);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.title {
+    display: flex;
+    font-size: 4em;
+    /* Increased font size for the title */
+}
+
+.letter {
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: fallPop 1.5s forwards cubic-bezier(0.68, -0.55, 0.27, 1.55), wave 1s ease-in-out;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.letter:hover {
+    transform: scale(1.2);
+}
+
+.letter::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    border-image: linear-gradient(to right, #ff0000, #00ff00, #0000ff);
+    border-image-slice: 1;
+    box-sizing: border-box;
+    animation: pulsate 2s infinite alternate;
+}
+
+.letter:nth-child(1)::before {
+    animation-delay: 0.2s;
+}
+
+.letter:nth-child(2)::before {
+    animation-delay: 0.4s;
+}
+
+.letter:nth-child(3)::before {
+    animation-delay: 0.6s;
+}
+
+.letter:nth-child(4)::before {
+    animation-delay: 0.8s;
+}
+
+.letter:nth-child(5)::before {
+    animation-delay: 1s;
+}
+
+@keyframes fallPop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulsate {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.2);
+    }
+}
+
+
+
+.back-button {
+    background-color: white;
+    color: Orange;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.back-button1 {
+    margin-left: 1200px;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.tag-line {
+    font-weight: bold;
+
+}
+
+.welcome-body {
+    background-image: url('https://bvscanada.com/images/Construction/BVS-Canada-worker-construction-intro.jpg');
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.sevak-title {
+    margin-top: 170px;
+    color: white;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#header p {
+    font-size: 2.6rem;
+    /* Increased font size */
+    margin-bottom: 20px;
+    color: #fff;
+    /* Changed tagline color to white */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    height: 60px;
+    width: 200px;
+    font-size: 25px;
+    border-radius: 9px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff6f00;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.feature {
+    flex: 0 0 45%;
+    padding: 20px;
+    background-color: #ffeeda;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.feature h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #343a40;
+
+}
+
+.feature p {
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.home-body {
+    font-family: Arial, sans-serif;
+
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    background-color: #ffe5cc;
+}
+
+.navbar {
+    background-color: #ff7f0e;
+    /* Orange shade */
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+}
+
+.logo img {
+    height: 60px;
+    width: 95px;
+    border-radius: 27px;
+    margin-left: 30px;
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+    margin-left: auto;
+    /* Move menu items to the right */
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px;
+}
+
+.navbar ul li a:hover {
+    color: #ffc107;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px 25px;
+}
+
+
+
+
+
+.featuresHome {
+    display: flex;
+    /* Use flexbox to arrange items in a row */
+    justify-content: space-around;
+    /* Distribute items evenly along the row */
+    flex-wrap: wrap;
+    /* Allow items to wrap onto the next row if necessary */
+    padding: 50px 0;
+}
+
+.featuresHome .container-ffHome {
+    height: auto;
+    /* Auto height to fit content */
+    width: calc(50% - 20px);
+    /* Set width to half of the container minus padding */
+    text-align: center;
+    margin-bottom: 50px;
+
+    /* Light shade orange background */
+    padding: 20px;
+    border-radius: 10px;
+    /* Add padding to container */
+}
+
+.featuresHome .container-ffHome:hover {
+    transform: scale(1.05);
+    /* Increase size by 5% on hover */
+}
+
+.featuresHome h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.featuresHome .content p {
+    margin-bottom: 10px;
+}
+
+
+.featuresHome img {
+    max-width: 100%;
+    /* Ensure images fit container width */
+    border-radius: 10px;
+    /* Add border radius to images */
+    margin-bottom: 15px;
+    /* Add space between image and title */
+}
+
+
+
+
+footer {
+
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.fixed-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d2691e;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 9999;
+    /* Ensure the fixed bar is above other content */
+}
+
+.fixed-bar ul {
+    list-style-type: none;
+}
+
+.fixed-bar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.fixed-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    /* Increased padding for larger hover area */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Added background-color transition */
+}
+
+.fixed-bar ul li a:hover {
+    color: #ffc107;
+    /* Hover color for text */
+    background-color: #ff4500;
+    /* Background hover color */
+    border-radius: 5px;
+    /* Add border-radius for a smoother transition */
+    padding: 15px 25px;
+    /* Increase padding on hover */
+}
+
+#success-container {
+    background-color: #ff7f50;
+    /* Change background color */
+    padding: 20px;
+    /* Add padding for spacing */
+}
+
+.testimonial {
+    background-color: white;
+    /* Remove background color */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    /* Use flexbox for layout */
+    margin: 50px;
+    /* Adjust margin for spacing */
+    align-items: center;
+    /* Center align items vertically */
+}
+
+.testimonial img {
+    width: 100px;
+    /* Adjust image size as needed */
+    height: 100px;
+    border-radius: 50%;
+    /* Make image circular */
+    margin-right: 20px;
+    /* Add space between image and text */
+}
+
+.testimonial-info {
+    flex: 1;
+    /* Expand to fill remaining space */
+}
+
+.testimonial h4 {
+    margin-bottom: 5px;
+    color: #333;
+    /* Adjust text color for better visibility */
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #555;
+    /* Adjust text color for better visibility */
+}
+
+.login-body {
+    background: linear-gradient(45deg, #ffa089, #e48400);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.container-login {
+    animation: fadeIn 1s ease-out;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-heading {
+    font-family: "Roboto";
+    font-size: 46px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-family: "Roboto";
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.input-bar {
+    width: 100%;
+    height: 41px;
+    border: 1px solid #95a5a6;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.input-bar:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px #3498db;
+    transform: scale(1.02);
+    /* Slightly larger on focus */
+}
+
+.name-email {
+    font-size: 22px;
+    color: #34495e;
+}
+
+.input-container {
+    text-align: left;
+}
+
+.login-btn {
+    width: 80%;
+    height: 36px;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 30px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(45deg, #f39c12, #e67e22, #d35400);
+    /* Shining effect with different shades */
+    transform: scale(1.05);
+    /* Slightly larger on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add a subtle box-shadow on hover */
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.aboutus-bg {
+    color: white;
+    background-color: #ffa089;
+}
+
+.back-button-a {
+    background-color: #fff;
+    /* Blue background color */
+    color: #ff7f50;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.back-button-a:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.back-button-a::before {
+    content: "\2190";
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.back-button-h {
+    background-color: #fff;
+    /* Blue background color */
+    color: #ff7518;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.back-button-h:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.back-button-h::before {
+    content: "\2190";
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.help-body {
+    background-color: #e2725b;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container-help {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ffc107;
+}
+
+.find-body {
+    font-family: Arial, sans-serif;
+    background-color: #ec5800;
+    color: #333;
+    padding: 20px;
+}
+
+.back-button-find {
+    background-color: #fff;
+    /* Blue background color */
+    color: #ff7f50;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.back-button-find:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.back-button-find::before {
+    content: "\2190";
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.find-cat-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.choose-head {
+    margin-left: 100px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#search-bar {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 60px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-left: 200px;
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    /* Add transition */
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    /* Increase size on hover */
+}
+
+.category-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.avialble-body {
+    font-family: Arial, sans-serif;
+    background-color: #ff7518;
+    color: #333;
+    padding: 20px;
+}
+
+.back-button {
+    background-color: #fff;
+    /* Blue background color */
+    color: #ff7f50;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.back-button:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.back-button::before {
+    content: "\2190";
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.container-available {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.job-details {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.job-details h2 {
+    margin-bottom: 10px;
+}
+
+.apply-btn {
+    background-color: #fe5a1d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #ffcba4;
+}
+
+.offer-body {
+    font-family: Arial, sans-serif;
+    background-color: #ec5800;
+    color: #333;
+    padding: 20px;
+}
+
+.back-button {
+    background-color: #fff;
+    /* Blue background color */
+    color: #ff7f50;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.back-button:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.back-button::before {
+    content: "\2190";
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offer-job-body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.job-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.details-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.details-text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.apply-button {
+    background-color: #f94d00;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.apply-button:hover {
+    background-color: #ff7f50;
+}
+
+.back-button {
+    background-color: #f94d00;
+    /* Blue background color */
+    color: #fff;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor style */
+    font-size: 16px;
+    /* Font size */
+}
+
+.back-button:hover {
+    background-color: #ffcc99;
+    /* Darker blue color on hover */
+}
+
+.back-button::before {
+    content: "\2190";
+    /* Unicode character for left arrow */
+    margin-right: 5px;
+    /* Add space between arrow and text */
+}
+
+.dashboard-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+    height: 100vh
+        /* Orange background */
+}
+
+.dash-board-container {
+
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners */
+    background-color: white;
+    /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+    margin-bottom: 20px;
+    /* Add margin bottom for separation */
+}
+
+.dashboard-element {
+    display: flex;
+    /* Use flexbox for layout */
+    border: 2px solid orange;
+    /* Orange border */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin-bottom: 20px;
+    /* Add margin bottom for separation */
+}
+
+.dashboard-element:last-child {
+    margin-bottom: 0;
+    /* Remove margin bottom for the last element */
+}
+
+.element-content {
+    padding: 20px;
+    /* Add padding */
+    color: black;
+    /* Black text color */
+    flex: 1;
+    /* Flex to fill available space */
+}
+
+.element-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* Add margin bottom */
+}
+
+.image {
+    width: 100px;
+    /* Set image width */
+    height: 100px;
+    /* Set image height */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover container */
+    border-radius: 50%;
+    /* Rounded image */
+    margin-right: 20px;
+    /* Add margin right for separation */
+}
+
+.signout-button {
+    background-color: #ff4500;
+    /* Orange Red */
+    color: white;
+    /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    /* Add margin top */
+}
+
+.signout-button:hover {
+    background-color: #cc3700;
+    /* Darker shade of orange red */
+}
+
+.review-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+    /* Orange background */
+}
+
+.review-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners */
+    background-color: white;
+    /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+}
+
+.review {
+    border-bottom: 2px solid orange;
+    /* Orange border between reviews */
+    padding: 20px 0;
+    /* Add padding */
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review .name {
+    font-weight: bold;
+    color: black;
+    /* Black text color */
+}
+
+.review .date {
+    color: black;
+    /* Black text color */
+    font-size: 0.9em;
+}
+
+.review .rating {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.review .comment {
+    margin-top: 10px;
+    /* Adjust margin-top */
+    color: black;
+    /* Black text color */
+}
+
+.history-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+    height: 200vh
+        /* Orange background */
+}
+
+.history-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners */
+    background-color: white;
+    /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+    margin-bottom: 20px;
+    /* Add margin bottom for separation */
+}
+
+.work-history {
+    border: 2px solid orange;
+    /* Orange border */
+    padding: 20px;
+    /* Add padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin-bottom: 20px;
+    /* Add margin bottom for separation */
+}
+
+.work-history:last-child {
+    margin-bottom: 0;
+    /* Remove margin bottom for the last entry */
+}
+
+.job-title {
+    font-weight: bold;
+    color: black;
+    /* Black text color */
+    margin-bottom: 5px;
+    /* Add margin bottom */
+}
+
+.company {
+    color: black;
+    /* Black text color */
+}
+
+.dates {
+    color: black;
+    /* Black text color */
+    font-style: italic;
+}
+
+.description {
+    color: black;
+    /* Black text color */
+}
+
+.notification-body {
+    background-color: orangered;
+    height: 100vh;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+/* Add this to your existing CSS file */
