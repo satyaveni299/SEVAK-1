@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+
+    <title>SEVAK</title>
+</head>
+
+<body>
+    <div id="sectiontitle">
+        <div class="title-body">
+            <div class="title-background">
+                <div class="title-container" style="margin-left:80px;">
+                    <div class="title">
+                        <div class="letter">S</div>
+                        <div class="letter">E</div>
+                        <div class="letter">V</div>
+                        <div class="letter">A</div>
+                        <div class="letter">K</div>
+                    </div>
+                    <button class="button-title" style="margin-top:300px;" onclick="display('sectionwelcome')">Click</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionwelcome">
+        <div class="welcome-bg-container">
+            <button class="back-button-welcome">Back</button>
+            <div class="container-feature-welcome">
+                <div id="header">
+                    <h1 class="sevak-title" styel="color:white">SEVAK</h1>
+                    <p class="tag-line">Step into the world of endless opputunities </p>
+                    <button class="btn" onclick="display('sectionhome')">Start Now</button>
+                </div>
+                <div class="features-welcome">
+                    <div class="feature-welcome">
+                        <h3>For Workers</h3>
+                        <p>Find jobs that match your skills and availability.</p>
+                    </div>
+                    <div class="feature-welcome">
+                        <h3>For Contractors</h3>
+                        <p>Hire skilled workers for your projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="sectionhome">
+        <div class="home-body">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="https://static.vecteezy.com/system/resources/previews/007/724/097/original/labor-line-icon-free-vector.jpg" alt="SEVAK Logo">
+                </div>
+                <ul>
+                    <li><a>Home</a></li>
+                    <li onclick="display('sectionlogin')"><a>Sign In</a></li>
+                    <li onclick="display('section-AboutUs')"><a>About Us</a></li>
+                    <li onclick="display('section-Help')"><a href="#">Help</a></li>
+                </ul>
+            </nav>
+
+            <section class="featuresHome">
+                <div class="container-ffHome" onclick="display('section-Find-Cat')">
+                    <h2>Find Work</h2>
+                    <img src="https://th.bing.com/th/id/OIP.QUamJ3H9HDm2S3b7pRY9jgHaEc?rs=1&pid=ImgDetMain" alt="Find Work Image">
+                    <!-- Container for finding work -->
+                </div>
+                <div class="container-ffHome" onclick="display('section-Offer-cat')">
+                    <h2>Offer Work</h2>
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAEFAYgDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABAACAwUGAQcI/8QARBAAAgEDAwIEBAQDBQcDAwUAAQIDAAQRBRIhMUETIlFhBhRxgSMykaFCUrEVcsHR8AckM0NiguElNHNEkrIWU2Oi8f/EABsBAAIDAQEBAAAAAAAAAAAAAAIEAQMFAAYH/8QAMhEAAgIBBAEDAwEHBAMAAAAAAAECEQMEEiExQQUTUSIyYXEGFCMzgZHwobHB0UJScv/aAAwDAQACEQMRAD8A88CD1FOWPnNJevbFOBx7jNZLZojfEVTgZzRCliBnv04pgVDk7RnGQaevbAxQyphcEm48ZJzn2pzlsDHXGOMCmKXzyB1qU4A7dKGieiNt3lx1xSG89acuT6A/4V3Jzyajojsj8+cU87z0x0ph3bmI5zx0qVCfKMfWuO6GjxsEU8K+3tnNdfcT0wKac9M1PB1ndsmSc/0rg8QHJ5/Sugkd+tLJ5rqRF0NdSQ2e9D+E2OeRzU7AkHntUR3KoAwevSiolSdESkxyxYGfMKuY24YZ6iqIMwmjBH8VXCkjb74pjH0LzHSn8o9BTkLGHFNm2hun8NPjUGDd6Z6UQD5LGzyLJxn1xQDHJAPUNj7Zo2zObNmHTNAtnef71F4BD4SC5OR+SpHGYyPTmmW+3J6flqY4KyemP8KrkFF8lPLI6K5Vc80IbqcjGABRxA83GfMRilJFEFBCjOKUcR+EqXJXiSRuAuc81YJF+Fuxhsdj0qMYVSdoBz+1SJIWwNuKiKSZ0nfSIlkuQdpXIB9qLRs43YB9KZkEjkCnsqEYHBFWUBKukcZhu9qaSM8UgozhsVIFjweBUNHLgYMEe9dYZAxThtHPGPf/AM1JHDdyt+Bbzyj/APiidx+qjFC3GHMnRNt9EZKhQDnpUDrJgbAeeufSrJ7HUUG6Syu1XqSbeXAH2FDhkywJ6cEdCPqKFZIS+12HGyCLcqMpbkim+C7cZPP0qVo4ywIJBqYKML5unJxRKCb5C30uAM2+OCxB79KmiRYvMWbPvinyKpYsScH0peHG4wS1WKCXQDyN9jlYMQRzinKgZyxByaZGqrgDNSq6A59D3oqTBlKvtH7MebGAPeo5Qj7TkZB4p8jRygLu/SohCqEEE+tdS8EKVrkd4LEAE4FMMbjgYx05ogMg69e3NcIU88ZrkiKIBExbaSM+1OeA7cFhxTvMpJABppndsLhRxU9MmkQ/L7cbW5Y80qkDtkAheKVSCY878HFSRDpk807ap47+1OCY9aFvglEqDng1IOozwKahRQRg1zw2Yg58uc8VWzmS8E9aTMvGc07KAVxkDgEHA+tQdQzI3D3xinsrjpS2EFTwcU4NycmoZPS4I1EgJNOPPRsH0p30GaQKqeQKIizhSTGC59ftS5IqQlWIOe2K4ygDPrXKJzk2R4OCaaTjGTwDT8pyN3am5U4HXmpoE624jjpQ8z+HEHPqRUryEcACo32yLtIyOvtU/qT4BbWaOS6jDZ5zjPrV55QF571RQRRi5Q424Jx9auf5frTSrwL5Dl02GJU87KJtgRZrk8lTmh5xubPqvNEx4ECj0WoXYAZZD/cW543GgxgyH2Y0bacWRwerGgTwzn0NEyCwgVgHPtxUx/4bdMkVHZeZCT3OKllAEb4+gqubCj2VMo2BtpJYGhhM7HGDx60cEBIPuSa5MqAEqFz7cUq6+R6PCIIhvUlhUqhRnPpQZa5yQAuO+CKkX5g4yBiojJBSgzu2TexB4yMZqccDrSUELzjOeKRA9veiTAkO3LnJOAaOt9LuZ8SSyC2g6lnGZWHbZH1596NsrO1s7aC8nIkupY/GjDAFLWI9G2nq57en3ou2EtzIs035cnw067R6k9ye5rB1nqUlax8V5/6HMOmvmQXp+k6fGFdbcO3USXP4j/UA+UfpWiijwFAJwOg6AfYcUHbgBRij4zXgtZqcmWTcmNTioKkgmNfc/rUF5pWl36kXNtG7HgSAbZV/uyL5v3ohDUvUgZxnjms3HlywmnibTM6b55PPdY+HbnTg08JM9nnl8ASQ57SAdvQ/6NHjGeT+lewvbMVYMqsrKVZTgqykYII9DXnGvaOdNut8W75SfLQ9/DYdYmPt29vpX0j0v1DPuWm1sam+r8lKal0UbA4A5pyso6t9qcQeBzxTDErnvkV6izqXkeME9OO1JkPXHBpyAqORxUhbcMDsalEVXRBlIyCwx6VL4kRwAcmmyRmQYxjmmpbyxsGODRUR2S7QxBH71IBx+Un6U0Ag80/zYOKk62cKrtJIwMUMqxuTtGSKmZC+QT9ajWPafJ/WpaR3gYVwQffvSp+MnzDPOaVDRPBkiOhz1qVdmMbufrQRuARgjgVMCgjEhBzQuDXYX6hCgHPmqQSwxryeelCCbhiEp8JWQnK8gZ5FBsa7Jr5HsI5WVjIQM4AqZjHCOXOMUGJGMhUICEb9an3eLIEZccdPSpafk6kSfMRbVOTz0ru5Zc7eMcmophGiLt2tjsOv7VGJ5EBITPQUO2wbXgNj6HmlgbgMGoIJjIDlcY9akLvnt/jUNUQibK5we1dYjH/TQ43HqtdbftwDXWRQ4iLzNg5xTIir5wCuD1rg3FSPalGecMPXFSmFt4JmSMA5qBwiqNvHH60yZnBO059Ka7METKgn60XZG0ZGA1zHgnjk1aKeV96q7di044AOKswPy80xEXyKh8gI7npUyAmH/sqJ/wCEevHt96nA2xkE/wAOeKldlYXaJixPsTQR53+5o+2J+RloLB25460bIDbEnwiOmGoiX8j81DZqFgJ75om1iW6vbW2YZjaRTNzgbeu2kdVnjhg5y8FuKDnKojtK0C/1TMgb5eyB2tOyks59Il71qrb4b0C32p8qLmVfzyXTl8H/AKs+X7AVazSJHHDBbhEBPg26qMKoH5pOPTtXEKjEacInr1Y9ya+a+oerajPJ7ZNR+EacMfFkf9jaHIpRtNsSvfbbov6EDNVN/wDB2nSqzWDNayAHEbEyQMfTByw/WtNH0p/J6DNY+D1HV4Z3jm7/ALlUuDyG9srzTpjb3kLRSYyp6xuP5kboRQx2hSc84PXp969a1PTLbU7V7a4XB5aGTHmik7Mv+Iry2/tJbOW5tbhdssJZXA6HA4ZT6HrX0T0r1b9+g4TVTXaBSTLh0OYICSQFQscYyFUAVaWqABR6UM0asYZi2JGjiUxbT5V8MHdmjrYbiFXlsE4HJwK89q5uqNmHVlnCMCjEoOHpRHiIhQMcb2Cj6n1rzmSLk6QOTkNQ9Km7UMv17U+W5tIeZZoo+M4kdQf0PNKLFKb+hWzNyLksElURoWyWJ2Ae56Cq7VtPj1C0uLZxtaRd0RPVJV5Rv8/rQb69pSHw1kmkbcr4hhkIyNzDzMAOx79qr9W+MpNORZX+H9YlgZgi3CrCtuSexcMSPuBXu44tVrdPBe3LfGq48/NsR4xyuzFSRvG7xvlXjYo6ngqynBFRqyRkktkVezaj8O65p15qcVlLa3pkCje43POWwVdVODxk9KzssDNnHAr02mzzyQqUWmnTv5G4xT+7oIWWPHUE12NuvB59KHihZRyck88elFIoAPWno2+WC6XCHb/Y10uG5wcjjHakqKM8HJpZTaRzmraAsRA5OT611TtGTnGK5vj6Z9uldIDKRk4xXHOSG+JHhsNyaYgTOAc56VwWyjv1HWux25jbczcV1EcHWQjDYPWlUzspC+gpV20DczCqiBug49u9OL4GNvSmqGBA6Z65qcouBjGaBv5LlS7ORlSrHaAQK7FIQWAXnmm7HHPY12MEMTxzzQsloejDeRs7jJq/+FdPttU12K3uUV7aK3mu5I2ziQx7VVTjtk5P0qgUyknOK2/+z62ZZ9V1Bx/zIbGM+ilTK/8AVauwx3TQvllUWbK/+H9J1LS7u0+TtkkSGV7N4YkR4pkUsu0oBwehHvXjDHanK+bjcMdDX0Fa4SUdME/bBrwnWbeS01TVbMLhbe+uYh/dWQ4x9sVfq4JU0L6WVt2V4kkwdq/SnxuzfnBqREG07uval2HIpBuzQckzrE8AdM0nyBnimgn1FddsKMYz0qEBXIkyAcntTFZznOPakviFeftXIsgtvokiGQuJzJ1AX2qZ87ExjpzUT7/FYg5U/wCuKe+7aB0zRMgVofxuQOBVhnoPeq60wZX7ECjcsSOPrV0RafZLI2V9xUyt+F1ydgod8hcHvT0Hlb+5VgFllZMTZzA9iaHU5GD2qWxz8pcDPVqGU4b9al9EItLc7bd29+Pr2q30y3WKNZWH4jgNnuC3mPNVcCh47aMjh5ow2Ou3OSK0GFwNowvYeg7CvIeu5WmoLybPp0FTkW0MvivJJ2ggSKP03N1NExHpVfaHFvN7yoD+hNFxNnAFeFzx5pGi4qmyxRv2o+JgVHtxVfhVVQv8Q5PrzRMLc/UYrtHlem1CXyZOaNqyZ1Zue1Yr41sVNvBqKL50JtpyO6kEox+nI+9bZ2AGO+KrNTshqNhfWW4KZ4WVGbojg7lJ++K0XqIafXwnB+aZTC6MrKw8e3wpw8UDAn08JKIsH2NkAbhI/A6kZqq1G/0/TWhlvLorJDb26PBbBZrjeIlDALnavI6sRVBP8VavcqYtKiTTbdyczK3jXr57mZhgf9qj61sx9NzatXHhPy/85NZZowjR6HcXNhYui3N1b2/jyIluk0irJIznACoefaq7W9dt9JkWGSKAy+AlyrXc4jQMWIVRGBuzxWCsfhL4l1tZr6K5tktPEaO51HULgIoYEbssxaTIyPSjtR0f4K0S3dr+71TXtUuIWigkhJt7OGTG1WLuS528d2+npr6b9mMGOcZZZbvldGdk1mSXEP79hl58f2CoAjX17MUBKRFbK0Rj1Utgyn9BWS1L4r1nUMpGsFlDk+SxQo7f35mJlJ/7qitNObUrhEECRRKmJDED1BwM7ieT9RWjTQtBkY2UkJiaSRIVukkcyW8sreHHJkkoY84DDHet/HDSaWowgl/QrWlz5k2nwDaD8ZfEGnw7p2h1G0iOySG/QPKqEEHw5hhwee+a9W0T4o+HtcjW3aIW88wY/LXYQxy7j5hG35T9CAea8KjF5bXN1Zypi5hLrjoGaNsEMOmDzirATz5AhIJbw5FKEhQcA4IHOcfuK2oxU1wzHncZVI1F9pkelajrNnEFSBdQuJYERmISKXDIvmzyBxUIwoIznPXNRLqNxrMk91dMPm1McNyFG3LJGqhiPfHNOa3Y87mwKyMsamzWxy3QSZMmFGOtdB5x3NNjiI7kmnhMZODmgoPhDlO0ZPXmmc7txHWpOCMYyRiuHBwuCCP2qSHXk6EHBwK4Q3bGKfkDApbcqQc+uRRJAcCKnaBXCPLt604IcdTj3qMREOW38HtmjSoil1Z3YcjjmlT8gMMZpVNgmIlVWAC0zwZMDDfrTZBtIO45zzzUysrKBuxS3SLl0ERBTEqvjNR+HtLbW4NMCFckMTTg45GR96BnMdEACdzc16V8HxrHoMUo6zahdyt9iIx/SvMVQlj5s+gFeo/CqlPhe0GeVku2+/jsKd0iuTFdT9hrYm86H1wa8t+O7cW/xHqDDAF3HbXa8fzx7G/cGvSbd22Rk/yrnPtWL/2l2ge40G+6eJaz2zEdMwuJBn7Maa1cbgLad1M8/IkAbBz3p0C4ILt+9OUoqlfXjmoxGSzbT36VkXxRqk3dtuPah5YZn78A9qnUAcE896kcxkCuXAO6uERJlU2nqBwabgjnOTTmQHuQK5tCkHJI9KnojhkTbdy9c06VxtXg+9NdiWyKcqSSqMYx79aIh8HLDYZ3yO3FWyQq7cHB569KAtEVJXDfmx96s4clh9aviLT7B54ypIPtiuoMhuf4anuV3yFfYVGoUEfoaKwGG2P/ALecY70OIyWJ7Zo2LasMm0dQM0OgLuVBGSR1qZSUVbIVvhB9vhRC38kgwP8Asbmr8HCpn+Vf6VR29rfSMqxwyFFOQSrLk8g4J4xWiSyvHVCVVRgcMckcV4X1jLHJltO0ei0cNmOmEWp/Ak/+Vf6UVCSA578Y/wDuFRwWjxxurOuCwbOcAYHTJNRy6ho9plZtQtwx4KRuJZD/ANsWTXmnCU5fQm/6DLcUqLO2k8qFzk7nUnPbcRR0WQ2OcisfJ8Rxopj0zTLm8cbiGuJFtoyTz0wX/YVQSfF/xkt1HPPFaw21tKHuNPhjKmWJeGV5pMv9xT+D9n9XqZb1Hau+Xz/bky9RkjE9Knujatey3GPDjiEkYyu5iAcqozn9qxF7req3ryBnEcT5WOGPgAe5HJqqfUvinV2urhLyCwtLhi0CKFhURt0QyxxtIQOhbgVDHrepWscmlSLbw3atMtxcRQRfNSxP+VWl54IOVK9R3r0un/Zzat7knLz+BfHqIw+6HZHfWkLJ4bRQvNMxUK7kDOMln25btxVP8vdh4oYIvFUHzvjYqdxt3cc1axApKsqdV5XIBwSMc5/SuzXFs34ULmJD+cSDITdw6Kx6j0r0+gm9HDbH7n5/6J1EVqHfheCe2jjEYiyw2OJTG7ll3kAFiv5d3vjNSajYHU4EhRkSVZBJEz5wpHHJFDaVbLEHbzMhJwzZ3NknBcmrqNFV0PHm4pTLklLJubt/Jp4scVj21X4GafpEdhaeHG3iv4jysxG0NI2PvgdqD0SI3mrahLJFugl8eDyE7A0UwczMD0xtGPc1okYr5dvAGfrUen6ebOG9laZXlm3MCgICKxzjHTmgd3bCxSUI0Zr4xsI98F9ajE8Ks05QZGyQkkE/esta3CpJlvDLGIlkXcoTZ5evvnNekaxYXtxpsjW80ihEZbmOOFZ3eBx52RCQdy9sHvWAj0hZ7q2g00S3AlZLdA6lZW3cM7g9AO/pitjR5Ht5Zha7GnK0uw3SRDHc30SjDNFDJIcYCtuYBR36c1dKwCkbutU0mm6nZ6tqdtOixvCIwZAXb5jd5kcM56Y6DFGItyCMsDVGdqWRtE4E4Qp9hqEBvzE5/rUrJKR5RxQcayhst0o+OdtrArj0IoKsPdIjjDIxL+owKcxUuxBrhZS3JJz6jmpRHHgkc1O0JytcjMjAOOaaWJ6CpGHl2gYJBodUmBO/t3qGqK+/IQreXBH1qGWGSSRHToO2acm5W56GpT5SMnipVsLrkYqkYDDk0qk8RfEU58uKVS0CmYU+E3UDNNaFPzDjuMVx8IRhc08OO4IHp6Utz4LejgkUDaehJzUiRRvuI7Coyse3cATTROq8YIB4rqfg67J1Kq3lzwc/evS/gyXxtAWIkfhXN5ER9X8Qf1rzKFkZyOc4re/Ak4Nvq9v3iuoZ8e0se0//AI01pHWShfUxuBsLZj4Zz1BYceg6U7WdL07WNPghvUkYQy7oniYq8TuNu4EcegINCxyrHNcxE8qQwHU4PoBzRV2jX+m3dnHJJC0wj2TqMNG8ciuGAyD2p7K47GmJYotyTR53qfwRqVmk9xbSx3dtGDIQoZLkIOuV/KSO+D9qyy7UYlefpXte5gEElzwPKdqgFjjB5/WsZqvwjBLcXVxpk6xiRvES2lX8JSfzKjryPUcGseUTZV1yYhXRiemTUjoByaIutM1CwY/M2c64P5lUyIfcMmRUBDlQzRyiPON7RSCPP94jH71yRU0lyhrEBeSMY71GcyLkEdOgqVolZPN06feo4/DQMF4rnx2TFXygcRuhOBnPqaLgACqccjOagYsX4P7U5pJE8uRjGalcgSJosGVm7nirG3wJBzxxVTZlzK2eeM1aKxWQEDrxV8ULzZJP/wAWXk8LmoY+VH6GpSSzscc+lRrxuyO+aMAOj5hl+oFKCWeLeIpXQEgnacfv1psTbreQ+jH+lNhPB5966UVJVJWCm0+C1hkmeMFpZGPXLOxP9apr6KS3upXuHzbXBaWKQSOrRscZjZScHHbHY1b2+BEo+tBa/bRTWcRkTfslTGCQRuB4BqmWLGl1/oMYck965K+/trpIkkSXZbHBMjbnOPpnFT6YdNhwY7qOZ+Syqm9mPXAVeRVpaW6toiPcKTGjeEu7oxPAUL16UNpVpYxS8RgbycFOCO1KJpKqNn232aPTvBlK5j2HgtkYyD0461Fr+mfNXemRxhWhunS3mbADx5YBiT6YouzWSORU24UMGy3JYfWirq2S8lhEkjqsUgkAjwpJBzgn0pnF9ItmW7gpr26j07VtOhtYUaKHwgdi8oryeHsYqcBcDoRWS1fwh8UeHASVtVEHXgqQ7qOP5QR+ntW/urS/EWuTiCGRJIw9rBKdweWJj4R8mDxnPJ9q8psJZTqc3zPiG8eZkcMdzb8kyFsD1q3TxpykyjVTWyMEaUEoCevBPPSq+VJmAk2RqseSrTkKHcebZGDyT+tHjJzxke9RyQxTSeNICZBF4KnPlReTlR0BPeqXj3Oy3BljBNMMs9RthGq7GDFRuXA3j/A4qyhkTJOQUYBk9Dmsz8tfrHHMZI40EoS2RAGaYpzIz9woHSj7SYyLNH0KfjIPvhwP6/eqMkNrHYZNxo1uEdTgEYGP09K6134cRGR5mA681WRO4TcenHehrmYqygngtnrx96r3EpU+TbadKrIrDGeM0Wy2yTJKkarM3kPhqN7egGBms7o088xS2t13y4G7+WMH+KQ9q2ljawxFiCWmXiScjlT/ACKD2rQ02KU1fgztVmjjZV3vwtHrE8F1czS25WAxMkQQu+GyrOWyBjkYrBXdnLYXl5aSnLW8zxE4xuAPlb7jBr10ynJUYyPzc8AA9zWI+M4UW8tbxVws8PhSkg/8WM8EkjHIIx9KcniUVaM7HmcpcmYBXA5/Wn7lAGTUBaPj6+lPk8Nwu1hx70m4jkcnA9mVuAQOetdSUrld2aiWNRjOD96TRxk8HaRUpbSZSU0TmTdjnn2NOy5HI49aEWM7shhgHnmi8jGN4I+tdf4OSXydOSAM4INOLKSM8iowB1yMema6QpwBj65qUzmkvJITF5cKPrmlTNmduD04pUVAKRhQZDgtintnAIGaY43flNdjSQYDnj3pUsY3xHHG04p6KJM8DipiFKYGM89KhEcynIbjNcdZwCeNiQoxx27Vrfga4K6ndQMMfM2THB7tC4b+hNZmJjvw7A9f6Udot09nrejz8eF80sUvP/LmBiJP61bidTRVk+qDRub2fUbbWZbqB40WGFIwJVLq4I3nyiuySavqcTeFrUFmZCGbwo4lYc5PJO7mi9SiAu4m7NGOe2QSKjltoXTJjQnGThQCfuBTeTE5t0ynHqFGKW0FbTXgjMsl8LlgBucuQxxx3JGaMsLqNdg3IABgBmB+7ZrCXmr6vaXF5ZlIWEE8qRyOjFlXPB2k7OntUFlqt6kpMzGeNzlg+NwPqh/wpBqpD3upo9QuJLB9hXa7HupPHr04p0IihdZ4lOEyzRkkLIO4I6fSsrY6oki7reVTtOHjbAdPqKuDqqfLXXinn5eUADqWKkDH3ooycZI6SU40i61fQtFuYpp/kLRpVxK5MK5kQnnJXnI9ayc3w98PSblW1Nu+07WglcDJ6FQxK/tW8WSV1MLI2XtHGGJX/lrkHy1lXKvGWUkpkeIp/NEf+o/0NeghihJVNHmMmXJB/QzKN8HarK7izktpxuIiEjGF2IGcMcFQfvWe1CzvLO5Nre28ttMuQVlUgNjujflI+hr061leC5tRubzMrBs9twG1hVtqtrZ3cEsd1FHNEdiAPg7NzBcp3B9MUtl0MF9nA3i1k5L6jxyyQI0rZyRxijsljuyBitRafCNnHPfFkneNpNkJWWNwE/nRWIbn3zjFKX4d0xFu2hh1OR4fF2gSIquQN6hfGGeemcdqXWlkkXvPFmYLEBiOvr3qNGbn0HJo9tOuzb/NwoGhJKvGZYnmicHGx1XqfpThpF8IpH/AZ1wJIlkAkRupU7sDI780DxyR29dkVuxFrKT0LGmRMTgUVb2kk9vJEjwrKm5pInkG9ABnnbkfvU8WiXbsfDubFtu3/n7ScqG6Eds4ovbk/BG5Img/JH70++RZYBHjuGXPTcKKj0+eDwIXktzI52qFmVuT09/2oefaY186gvLJAiOfDlaSNtrBI3w5/Sq54Z10FDLHdwysh1fUEjjtoVWGKLcAqqrnI4yC4wKhM/yxicFI9x4VmHn9wOuafqmlRwpZ3cd4HLPtlSEtG8EmNy7lB6HnBoVLe2J8QpvkYgGSQ7nOfXPNLZcWx1JGzgze5G0zV6bdS3MaktjZgc85B96uFl2Alv4QST9qx9lPLaeUkCJmCj7Gru+vYhbW6xsN90dq+yDlm5/QVWnwc+ZGks5vmF3cken0rzq+TS7DWNVhmR0n+clXxUCNlXHidGwecjo1bjRJCAI2PIxj3z6Vlvi/4du9X+JdOi05c3F3AEvSQTHbxRYUXDkcDIOAO5FNYPqFNTxz8AciGFYpFaOW3m3eFNEcoxXG5OeQy/xDt70zcD/CK3WtaJp1h8K2tpZp5dJeDY5xvcyMElLkd2zk/wDisMQo/wDFFlhtZRhnuQxmCo5CnKowHpg9ahhPgvbSk4JaZHz0xIp4/YVPlSMYznr/AEoV7WeQg+OAqnKL4ZPOMZJzS04OSHceXaqYebuNYsE+36VBbW97q92ltajBXzzSEZWCPPLsPX0FQ2+kzTyjddkBVLysUwqRjqVUZyT0GaudM+KNI0EJY3mkyJE0pZru3cSTyN2klgc7j9m4ocOmuS3FmXVVD6ezaafa2mmWsdpZLmZj+LMxzKznqzE9/wClWM9/a6fZlpJAkcYILAZYu38KDux7UEl9pklmL63uYZbWWNpvmEbMaxr1HqGHII65rPRPdajfx3k0MrW0fGk2mQJGL/8A1VxkcZ/gyOOvat1KMUoxMJ3O5SNBp9/eXBneSIB0l2CFTlYlcbkV2HWTH5vSrdo45omiuEjlSTPiK6hkbPqDQ1tbpAgH4e9jnbCMRhiACQTlj7kmiFYlnGQVXC5/6sZIrpKwfJnr74Ss3Dvpz+C/JEExLQ/RX5YfuKyLWVxa3MtvewSQyICSrD8w7FT0I9xXqecD/XWhL/TrfUrdoZQolAJgl7xP2Gf5T3FKZsVxe3sbwZkpJTVo852W/Hkbj/qruIM58LPrk1NLBcQyPFINskbFHU9QR/rimbHweleflkyJ02eojgxNWonAtqc5gB+/+VPCWw/5C1xUbuwp+w/zD9aH3Z/IXsY//UcBEORCn6ZoyzFu0m17WJlCs2CvUgUHtI/jFF2IXxxulVVKOCfTjvR4pyclbKsuKCg6RzVPlh8sYoI4cl1Ij4BwAelKuatGirZNHIsqlpeQCMHA9aVay6MKa54PNMpGOT3rpljkxgnj0pjbJByD9a6sccY9e+aV4rks/UkVdozk4PrUisMMM8movFjKjHOKRKY3dgcVDRAmhZnLhulPVsFdpw4wQe4I5FNWZfNTQiyyKRweelErTIfPB6w0w1HSdPv4+rwxSMR1DflYfqKlRsxDPXA+vSqb4Juklsb/AEyRtxtpDIgPURT/AORB/WruMFVKEcoSpP0NbEHaTMuSp0YP4lg8HVZ2P/1MMFyP+9Np/cGqONHy/P0rWfGlsTLo10ON9vPbk+phk3jP/wB1ZdOPesvNGsjNDFzBBOnExXdvMcMYm3EE4EiYwUP1Gat9Lu59V1aHSmg8Eh2uVkc+JG0MA8TD7QDnOBxVCpYFWQ8qeMetXvwyLVNTkuZCfFlheJlAG08eX3x0PHpTemcMiUJdoWze5jbnHpnoK2+pKbq5kmi2x2Uxyvjs+WJf8rkenXNZ9HP4UwYA4GwHJWQHHlI6FT3o271KCz06Z5BceNOUtV8VWUlesjLgkAe+O9UAuUY5GRzkgHCxt1BAHGK2077MPJV8Fk80aEXOW8JXJZNwDQuCCFy3GP5Tnnp2q+ubm3aAsLnhjC43K3ILqf5SKysSvPM0UsJn8VBE0WYlBD85KyHaQOoHvWjnttG8AKVuLXw1iDIDcRgCMr2XK0LfhlmNPtHYp4wGIuIiuWYgkKcZ5/NipWeMyq6yAiSFSp5x5Wxnp70BJZ6UbeQx6lKm0P8A8S4jYck9VlXpQWmxTR2dxM141zbWzSqgjCl4422sTlD+UHrxQVfJam+mGbBa6lCSEEF2XjBwAY5QN20nGee319qNnjh3QyMkRO5lB2qTlh6/aqbVLyxe0E0Ujb4zG+/fFjC+bIyx+1SJqlrc2Mc4uMq5idcLyXVwGXoahq0SpeBgxbamIsIIp1KFcKBnqM0TImJ5BtRhvT+EH8yBqqNVmh3QXK3Ea7GyuFbcQrEZxgntVisySSpIksThhETuBXBGV747YqHH4DjIq5nWXUpY9kRjtlEjAqp8y+49+n0qn1CO4ludMSHYnys11MJmY/MFljMkhyedueKuLT5Y3erlpnkMcqA7OEOc52kgZz0HFCfLSXEs91L/AO2k/wB0t8HG9M75AD3UY2ls85NVStcFkKfJVW+pXT2tzbXMSE6jBFcKzDYPwZOZWJ4AVe/ofehYdXsmkdUKqyOdvjYjDAcZUnijddDn5QRRZklkFlGG5jYyuPzkcY4GB/lVbd6SkpnRI3F4IJJ4oxg7/C8xPqeAcfWqMuP3VyMYczxPjplrFeeO/wCQFQdwC/kHb8xonxHnuN7sMqFRB0VFHQKKz9hJcSQxhmCrtDKwBPFWltkBSu+R5H2oEUszEdlA596xZd0bsFxuNKdQe3/suO1jaa8lm8GGNTjxNw4B9h1JrY6bizgupLwr89IxjnmI5lljONqf9Azhf1ql+EtJjBbVZzDLePI9uFWRJfk4EIATKHiRj5nHoAPrq7mCKV3Mi7kx5R3ViMFlP0rY0uFQVy7Zha3O8kqh0iK9s01DSLqy3qrXMAIY5O2TcHBx14NeYX+n3emXDWt3GUkHKMMmOVf5o27j+lbyZ3S4FravL4zGOQtvAKIOwH6ZOPbqaNuIbDU7U2OpYJDFRIAEKToBkxMMgEdx9vpbm06fKKcGocfpfR5WFBbJzx0xTiB2JNWmraLqOkyEupmtWOIrqIZiYZ4D4/KfY/vVWjdc9f8AGs6Ua7NFTvojuLxbBROc7yGEcY/NJxzweMVDqtrBHEJevir4xd8hmXaJDknnjOKrdWtp92IhJL44YKMsdrMcdSelWGoyvdJsZhkRRW6/bCs+Pfkn6VZFVEl9i0Jbi3/DLyPZPLHJ8nzsubonEQC9M55PsK3VnNIT4pJ3IxSRgMtLeMPxGQDsOEQdsH1rL6WgUXd3kgWVs4tuODeXKmKNs9PIvP3rX6FCsVta3soG2MNDp0bcl3J89y2f0FM42+hbIvKNEsbwpmUnxim5wuMRIBkIMcZ9afCrqq7uvLv/AHm5xxQ2/eEUnJnk8xPOUTzsf6D71YQ4dMj+Ilvt0FXtsXG/410d/wDp710jH2pq9M+pJoCSn+I9PiubOa9jQfM2qBywGPEhBwwb6ZyKwp3f6NepPH40U8BOBNFJDn08RSua8zk3xSSRuoDxu8bD/qQ7TmsbX40pKR6H0vK5QcG+iIFueP613ze9ODk44H6V0Owz9fSspo2Uc82OtEWmfEOSR+FIRx3xUXiH1/aiLSeSK4jcEZZJAMqCM4zzR4l9aKs32M7fh/CtBjkPJ1HYgUqfqM08qQM7bsOw4AGMqPSlW1R56UuTzM5XI5pb2PBU4+lcUyZy371I27+HGf60sE1QlRAgIXBzzSO0AqQeTnpxUYafOCOKm3EjOORXMj9RqIDuAGKejxxMpI6UzxZkGSuQfapYtsmMgc+tcdVcl38M36Wut2b5xHdlrSQnpiTlc/cCvSLoJHIjMyL4xKqHYLucDPGeM1484eIhoxhkZWRs9GU5BFeqFYviX4dAwN91aLLEccpcoMjHfOQR960NPNuDj5QlqIpSUvBn/jC6smtNMs1lR7qO4nndY2D+HEyBRuI4yT0HtWORUbpnpmuMhj3B02sCysp4IYEgg+9NjljXPXpikcs3klbGscVCNJjkVVLeYdc9a6xcNmKQqecFTgj6GubInAwCDmuYiQ7SfN70KXwWNp9lguo3zACeTxeAPxM9MAfwkfepE1eSBAvgRsFPlyzDI9CcZqtMkRA83QdqhZUkBYMcCmFqMi8ir02OTtot0+JtUgdTbw2iKS3iJKnjeISc/mOGGOgwatYfjeQFRcW00SZG4QyiWIY7hZAH/wD7Vj0VUdWyevfpUc45YhuDnjHH70UdTku7OenxJVR6fF8W6JeW0ybXMhPhhSgyxzkkhug+9WVgdLks4FaKBZGDbkdVUMGPTcvl/evKNNwYH453EfarSCS4jX8OWSPjHkZgCPoDino6q/uQhLCk/pZvJ7NVSc2hhKZZ4oZYUZduMEI45x6c0Dp/yl5BcQT2VnkO0cyMGicZwwKsVqig1/VLPH/CkB4IkUgYHHbj9qP03WrEtdtdxsjTMjEwglF25/mOf3q+OWElVlTg0wnUNMtzHLBNaJucrLaSWUrqZX6GKRcgc4496ijt7J9OgZYbqymth4bSSASYMTgESK7MOR39qNN3a3BkVJkmt2URjeCpIzvJOeOOgxVdPdjT7sQSys0V5nwXlXBMoXCxuehJHGe/2qxdAv8AQilsZorxEtJHlhvpBPduW3O8SAZO4cc9Bj19q0KSW11HC9ugEC+JbxpgbU8Lyso7YBqu05ZbmQPH5YSDaI6gZEjEGQgeqDge5qS8sJbRnaydo444mWJUY+RR16fvxQy5DjwVN9aBri1EJxHHBNelQQw8aOcRwnae5J6DsKOLmD5O+iIaW2a3kygBLImA4K+4yOlC6RI89/Zz3kaAxG5toWYcSSlRIx54yMAAVYXsfjxRWvCu7MocKCyhTn9Of2qEvBLfFmQFjJDPd2trIiwQzTqJH8xSLcWBKqOuMVc/Dl3Z2GsWdvMmbO6srmxe4k/4kZmXiRV7AkEHAPXtU91o8B8C2O4meaHOCVIDkNztwc4GT9a0elaZYEXErWyb7h5GV2VXxCMxog3ZIGBngil8WljBt+RnLqpzSS6QH8I3i2mt6xZyQiOHUYYHt3BI8a4gLIdy9NzKQf8AtraX8sVvaXN40hWO3heRmDDBUDnrxzWU1DSbe2gaWETpIrLJGVfeoZTlQCRuBzj1rrTXepG00y8VdoRL3VFhJaJ41OIoiT/OeTz0HvTShzYm+eERafqXhwm+lt5fm9ULPZbyN6IrZDyL2Azux34HerWzvbCO2jg8Vm3XSKPHXDSzghnEfv3PPegopbe8urqdyghjPhLIF4SKI7PLjuT0+g9KY7QXGoaeyCNI4A4iUsFRFIKbsn65/wD9q1U+wXaNij2s0bRmNWSRMMGVSrqezLyKwHxL8PvpsrXdlEW06TaWAIPy0rHGzB52nt9cVqLG+gaxglUxEbmjLb125VypAOaA+KNWhj0lkURvJNcxCHBVlUx/iF/tSubDxZbhytPaYu9iggsoIwCb+aRnZycJFEqnKqPWqZY3kMhLEKMINo244BPXPsPvRryySR+NIxLtCXO/8x8Q9DmkiBYmZ/4riGLP90+M5H6AfalJJPhdGlfDLSytmuks7KMYjkuJJ7rsfBiIQHPvj961HjSSyRRQxhYoYxFCu84UAYHQVSaMRDZpMQfGu4sxjv4bHI/zNaPTrd4kEsgy0pwB6Ip5NXRXFlMn4YQrMJJl28QwJACr8bpPM2P2/WrTTmMqzShSsQKwQZPDLGMMw9ielU+nq+pB3UlLV55JZZB1k820RRn0AAyft7jR5RECIAqKNqheAoA7UbZXwRvjIA6tn9B1pvFcUlssw/N0/u9v1psrpHHI7ZwqscD8xPYKPU9KgAkB5GO9YrXrCRNVujFExScJcKRgLudRu/fNbC3d2igMoAkZMsF5A74rEf7QLq+sngntpPD/APTx7gsJ2B46dDSmrgp4+TR9Pm4ZeCuaGRXVCoDMDty64P3peDdAc28rkdfCZWH7Gq2O6mutO07xmBeWzupdwGDkL2PWqGK+v00O5mS4kWSK92B1Y7tpGcZrFWLc3XzR6R5NqV/qbeG1uJWVPCZHblVmOwn6Zqwt9KuEnidwmwMRJiTJAII4FZN9Qvbn5SOe4kO3RjODuIO8/wAWR3qss7zUE0G/vDeXAkW62Rt4jE9hwTRwhFO/gqm5SW2+z0a/0m4mjiSyBYrKWk8RwONuBilQ3wWl8ujW813LI81y7zZdix2E+XJNKmJZORD2E+TywxhiSrCmxwyoWLEdeOaQMKEeZh/SnvJC/G8gf6FdyhEeR5QARn61EomB6Ag07wV//cxxxT0UbeJM8nmuJ5HqGIIcD2qHEqOpXkZxj/OnbJsblbP+FSwhsjcQTzXI62JWLYyCD/nXoHwRehra6siebebxY+f+XNzx98/rWA2yEnpjNXfwvdNaazbqciO5R7d/TJG5D+ox96Y00tuQpzw3QZd/G2kCPbq0Ef4cjhL1UHCufyy4HHPQ/wDmsckaMuQP1r2do4L23lgnUPFNG0cikdQe3+vSvKdYsZtHvprOSNmTG+CUDyyRN0IPr2NWanDtluXTKsGW1t8oAyg7Dymm7Y2O4qDmkjB3C7cbj3FPI28e5pSmNWmRSQxrjy8EVCTEiMmQMmiWbcMULcRRFC/OVqTkyLgMoB4zTGxlh1Pv2riSRjBz0x161LiOQO8Yz61yVHMKsAq2ykdSxz71ZJyBgdMVX2CM0Az/ADGrCMnB+tNx6EZdkci7mxnvUsalY5uBzhR7VCxIbPHU0RFJ5XyoPNGgOyRwRbDGRyOnH9KgErxlWwHCncFfJXNFPh4BjjnOKEf8uMcZAJ+9FbTVHUqN5Cgjh0NIUBcW/izEHb5ZB5Q3bJJJGfSm3MxYyockRxAy5yHQDzeYd/U1HY3bLFZrdLhrq4j8F8ADwwuyNG7cADH1rmqsjW+pEqTJJIY1KnDqowgVGHOWJArQ8C1g9zbQ3Vlp0UQ2MgXUZGXG4AuVRWz3bJJ/u+9AWdtrBecpMxEMzWqHg8L5nIz68CrT5ee2sVkky8kihWaIfiKka7FBU8HAB6Y612KVra3ZQAWKsd3KkzSks35sHPP7V0bs6XRSJcax83PPJiTwSqRBlH/FuT4a4wB0UE/etfpV5GfJJGUVcBCpOCoHTB55qntHXw7VnVh40lxd4YZ8gAhj/b+tFzx7ZD4TMhZAV2cqcjklTkdM+lEn8kKJb3l3CI5Z2fMMSM7sDySBnHP7VS7fldOlnZAuoajJvO3KFJZxiJVK87UXkj2PrQN68tzcWNkU3xI5ExhbYWEYDysUJx6KOf6126n1Ga8BjVjDaJ4SCZMZnk4dvqowOvc10n8HRRNOvy1va2UDEsFUzB2J8Un8itnvjnP/AFH0pmjSlrq6U8ssVuy7gW2IXclVz9P2qhi18yzTXElu7zLO6xoOFyvO7PXpxStZdZlj1idGaAB3XyNgARxl8Dv39alujqtmjXVPk9NhBC7WVnXH5yzOzYPas/fXk96kUkqhQWlMa4AwvTJx9KqWttRFvBJNcSeBbW5uJgzsQ2xNwTAb160S0c66fpkCh5JXWAOW2glXbxHZvQc/4UplytqhvHiSdsmYs0mxF/KqDaQRkLjAyfWukKtzZ2shUCOKe6uGXPRSGckn1JwKUIuDcX7AnK7haqcdFHDn7nn+7U+mWB1DUPM4MTqizH0ghYkqCP5jSyTYw3Re6RD+FFcz7R+GghQkeRccf1q8VJNTlNrBlbOJFW7nU4Lhv+TCR3P8R/xoBtt1MlvEFEC8yMq/mXOFRfr0+1ai1gW2gihVVUKBkL0B9BTSVKheTvkmhSOCKKGFFjiiRUjRRhVVRgAV1mJwvryfpSzgE+lcXPU9Tyf8q7sEf/r7VE435GOmQv19akqJiyrJgruA43dADxXEEkShQMdAAB9Kxf8AtKW2/s7T3nZ0R3mtyyLuPVZBwa2yDHGc4GM/SsN/tOWSbSNJiiRndr6R8IMnaEAycfWqMyTi7G9I2sqozcawwwacq5kVNMuCoxtJQ45+9UYl0n+xZd1vcLby3h3LHICyuB13MKv5oiGtBnbs0iRFBIADMcck1RHTL06H8uqxvI140ihZEwV6ZBzisLFXl+T1OS6XHgsZWt0F08al1i0e3ADHDCNgTjPvVcZbAaJYQtDOtvdXTNhJAWDBsZJI6UdNDJ4GrINiyNa2tsPEYKAUQE5Y8ULcade/I/D1uIhJ4MgeYxspUAvmihTXL8gTv48P/c9R0eNItOsEGcCJcD6jNKiLVNtvbKOMRIP2pUMeiuXLZ4YjRO2Cv0rri3U8g5z17U0PIrHyg08NuYhk602Yw7xIDtOe2K6EhA3bjz0xTHES/wAP6UkkjK4weO1QzlaYWhi2MN3WoBC5fcsmADTlMLICcjn9aeGiU8E8ioSJv4ENwI/EXr6+tIyXMU0c0LjfC6Srg9ShDY/aoWSN2wrkEkcU7wwnBk+9EntdgU2ezafdLNDFMp8kyRyL/wB4BpmuaTFrFk0QwtzFl7WT0f8AlJ/lbvWb+E7wSWHy28FrRwi8/wDLbLL/AIj7VsoZQQOetbSrLBNmU04TPF5fm7e4khlj2SROySKwO5WU4Irhkc9q9G+Jfhx9SddQsdvzSxbZoSMfMBfyspHG4dPevO5FlR5EZCrKxVlcYZWHUEHvWVkxPG+TRx5FNcCdyhHHUZoS4uDtK7Mg9qJLS45TP+VRS8IG2+YnGMZqtlnQEvgyFfLtPepVKIjBTjqTTQ4B/JzXJgoTdnHsO9d3wdZZWD/7uMdcmjS3Bx3FBWSf7rCQRzzRZPp2xTaXAlLs43RadGMRsc/xU1icDNOTHhsMdBmjoAJbiKL3yKifdtAHQjtTpCdkA9R+9JSQyAg5GM1LR1m7u7aCfTrInG6FYCrLwc7eB96zlnJfRSSJcr4tval7uZjkfisSY0De3Jx9KvZmePSbKY5ZdkBYqvmUfykDsfWuwCJtJdGUCfUZpBjGCBKxywP/AEoOPrWiuhWS5GtdW93b6dHFIpaVlJQnEgBAYnHp/rvUN8ouJLS0eMH5iUBsjlo2Jz+gzQl5pQaayeA7NsNxtxwEwyoMf67UDL/bFvfptmd/l7eZhuJIBMYQcH+9613FHNvo0D26O08sBaOLalvAq4KmOMncwQ8AE9PYe9JJZImEkqxyRwozlkJR89lw2R6frQw1MQKIpoCEjURqYuBgDaPKf86gk1CwazYCZMtI8hDeU+HEN54PHJwK5BOjlhPEkt/fzbkECvColUqGKfiy4IyvJwOvai1uTBZq0gAJilk3g5G51LHzdOp5qHw3j0q1tjw948SSEjnM5M8v6AEULqgj8C5SIFJpYZY49jFfO6kDgcelC2GlfRSmWxjguJUxJJLNIY1i6Kysqc7ecetT6dK0lnPuCBZri53rtYYVjtwN+DyO9dsLdd7BIxHbxLHB5lXNwUA5UjtnknHenXclvC3HieIh2oo/NKx6Iing0vPIX48XlkzBQfCMakbABFxgrjhSPShpZZAsDTBVkPhGQAEAB34GPpiqudr5PCuPmxG8MhdT5hEHIxywGSfqKmvGeRbWKJgXnghyx5ZpXkDZzn2qi+C+qYdOUSC9OVz4IUMSM+ZgTVnpKtHZGQqyrKixOV4ZgM5jQ+nqahitY7k3KPxACpmZQMlfQZ7mr2CHxUiKRAW0IVUVeU3Nwq8fvRwTYMmWmjWrkieQYCncy8Y3YAVP+0Yq+qK3hEEMUYHIXLe7Hk088DP+uatF2+TvU+3U13tSA49+/wBaR9Pr+lSQcJwM0LNHuyQSSzxL7Y3gn9s1MSGxg56Yrq+ZunCgn7ngf41Pg4mA4PAyf8a82/2k3Mqw/DCLIylVaWQoSM72C8gfSvR3JAUDuwrL69omi6nPEdRkZTFsjhVZAgHh56D7mltQ6gO6NXksx2pcQXkhwVXSlUZPQsTyKzM+5fh/RjnDPeTbTnBA3EZr1UaFo9wHX5kuDGIpB4iFWUcDcKik+D9MnhigLgwxHdEm1CiHOfLtrIxRcVTXk9Bkyxlyn4PP9QI/sfVHYgs15FEM8nyoKZOG+Z+EolYgmCHO0kZBxW7X4MIFykl7DLHLL4gikthtBwB601vg/wD3m1uTJbPJbECHCum1R225IoVGUVVfP+xLyRk7v/LNIgwkQ54UD9qVTLHLlQUXgD19O1Kp9mRQ80T5/XxVYYYfrT2MxJxgnPGKaViJ5yPTFPSIZ4k79zTBlrobm5/iTIqVQCEO3BIwae6vtAVhn+tcj8VSQdpFRZJKgTaQRyO3rUwELdR0GRURaTaDtHJrjTSDaQmezEUakV7eeDoNupzjkn06U5vl5M+bJ+lMG1udtcKxo3IYHrQBdl38N3EdjqUSlz4d2ht3B6bjyh/Xj716NFIQQOcEYOa8i3xnaVLKykFT3BByCK9L0q9S/s7W4VhuYbZAO0i8MK0dLPjaJamHk0EUmQuTz7VRfEPw5HqoF1bFYr5BzwAlwB0WQjv6H/QsI5Nvr70YkmR9f2pqUVJUxaMnF2jx28hu7eeaGRHjlj4eNxhlPuKrp3ugACo969l1bRdO1iILcLtmUYiuI+JY/oe49jXmuv6FqekhWlHiQMxVLmMHw29A4PQ/Ws3JhcGaGLMpKmUERZlfcMHtUcm/awYZ64pirOZMKwHPfpSnEgHJBHI4NUpcl0i8sv8A2kAOOhqfHDkjr0oazIFtBzxt5oo8rx0ptCMnyNV+QKkB3HaBjPX0pqxqctvUYHQ9a6gIBOOh61K5BJWOzwe5WkCxmBPdl4+9cwHbt96dEmZ0543AD7GiIRskuYJbKO23ASQKGkUjlUQZ3DPBHX9KdYoZoY5kI8G2tSkUTjKiSQb3KsPMONo/X7Vl9ZhtMurhHKTbdu5Tg7VXc37D96foV+ttpMMN+zR3BDu5YHad5ygJ7HkDpT8eUhfzyFNcCJolkJTCZIcEjruO1hxigrd3nl1C/ZQY1AgGxgw3ySCRjx6cAUZdymK1dwCxcBUC/wAQB8wGPXgfenfJxR2unWLIvjSsJrlk8pAjIlkJK46sVUfepfR1Wzlx8vIjAqM7seh6471nNR06KeeC2jYqJXt4iDx5STM/t0HpV7dRMDlSGyx4lZvQ9GUZ75qrW2vTqHzDKI443ndRv3klgETHl6YoHJIJRciK4i1C3vIRFM/hW8HjMASV3SHYOOewPbvXbVL68WK8uXUuZXMMKDaoUeUM+OST2orHiyT+JvRpGTGCCWVF2Dn+ooPxV02J7fxDIwLeAUH4j7yeB246Z9qpnPjgax465HTXJtiFELM5ZgFikG846su7HA6E5oNIzMfGlXxHI8pBP4Y/khB7evr/AEIjVZN0s3nZlCuwG0bR0jj74H/mmSrH5nTKhe6nj6H3pbljC4Ku+aNY2SSOZVCkHzN0PrnrRWnpDPHpEiHAgW3mO7G7akTqFY9Oc0bYabea749vCwSKNGeWScg5Uc+ULyfpkVd2nwtFDp6XEN6Joni+WjE8Ig8Uwk8g7sYJzj6UUU2BKS6A1mRFjjBzuO7aoyS2evFan4Vt50tZ5riGSJpbhzGkgKlo1AAYA9qktbBbLYpiQxlV8SWOMIxOOWGP86vQFwuOmBj6etXRjXJVOdqh2a5jcR6L+5rhJHHc8D/OugAAAURUd6fShLuST/hxlhyC7LjOT0X/ADol22jHUncRj2GaHVRwec53H61yOJFUgDBB4A6c56UoTkSNgcvgEHsvA6/euSEqjH0HA9zwK7kIgQdsLRHeBGdIEuryY4gtIpbiX2SFC5PPHavJYb27vofmLmRvFurW5vOCfKzyM2Qfat/8YXcFj8M6mJhKUvNlmRCQH2SHLkFuOg/evOrVrcW0Ai8UwjS22hseJsLHI44zWZrpdJG16bCrkVkWoXy6NcTi4k8dblkDk5OzAODREmqatbaJZ3dvdzJI8m1yrHDZyehoL/006VKEkuUgNywy6qz78DqBxiipksX0Czikumhi8Y7XMTPuI7ELSrq1x5H0nT/QtZ/iP4hs7zRIortjHeJbO4fDHz4DYJqfVfijX7BVvobgHfO8TRuCVITpgVW3lvavqHw8GvI1a3jtVSNkk3SDqCOMc0tYsri8sTFAELrezthmVeCeg3Gq1JXFf52E4up8eP8AgupvjfWbGayR0SRbmFZgTjcpYZI5HSlVBqmmajcPozwwlkit44pGDLwwX3OaVEpxSTsoyJqTVAa3ekTnzBVz6jFSmw0+cZilxnpg5qmuLOTefwiFQZyo60PG7owWNpAc4xk0ftWrhIy7adF6dImx5JgQPWmPZ3afwE4HaghqF7A+xnJwM0bFrUoA3pn/ACqKyLs5tEaiZQN6nrxx0p+WXnGfajk1awkwJEA+oqcHSJ85YDjscV3uJdnFTuYkZUfakdx4xVsNMtJMNHPj2NRnTLpXPhPG49COaJTiyLorTlTgqMcGtD8M6mtvdmyk8sd0QYyegnA4/X/Cqie1v0JLQcAckYxQnjhCpAw6kFSM5VlOQcj0q7HLbK0DJb40z1lTzx2Jz/XNFI/Qrn05qh0TUl1SxSY+WeAiO5XphwMhvoeoq5XIZQDwcY+2TitZNSVozWnF0w1X6V2RYpkeOREkjdSskcihlZT2IPFQIev7j0qTPTmufPZC46MjqvwNplw0s2mymzlfJ8FgXts/9A/Mv6mvPtV0DXdLYrdWzhMttkTzxvjuGWvcPrTHRJFZJFV0bqGUEH6g0vLDG7QxHM1wzyCCN47a0LrgugIHpR9ra3l7ILa2jDSHAyTtRATgFm7f41r9S+F7C7G+0b5WZclQoJgbPZk/yonStOGmWsURUNOGMs0q875SMA884A6Vna7PPS4XOKtl+GKyz5KFvg7VxtKXNnIdvmUtInPsSpFCz/D+v2qO72bOgxzbuspx67VO79q2UV3IbqVf4EUJ65Y+YhfpVmkqkY4685ryWP1/URl/ESaNSfp8K6PLRBdbjm2uccdIZeP2pyh4po1eORGLA4kRlOD3AYZr1TxGAyTx67jmqbX7H56zaaFd19Zhri28oJlCDLwH2YAge+K08Pr8Mk1GUasXloqjaZSySb2tLNmG242BlkOE8PO+Q7umcAU28FldLICwBWaPacHJAAJ/KOgouztobi2gniCmKeNJELbSSrDPP+NEmxz3z9MV6b97klSQutFF8t9mWmtpzNaGCWTZBJE5zuAJUliBn7dqNF3qyySSmUM7xpEu9Edo0UlsIT6k5NWrWAHO/v2qB7Rl5DZ+1UT1WV+RnHpMEPAFa31zFKyXRZ45WJEsnLROeg6flPT2om5uYkOOWPoOoP0GTTJYeCCM8EEEdqVqkXgvCw80ZGAuAWQ8AnuT2osGaUvpbAz4Ix+qIKJJbhipHhgkbWPLt9ug/rTbiKC2Uqerg+MxG5jnpg/0qa5VYPOpHiqCQB+VB1yx9aCMjXYhbnaJAYy3Bdh1Zh6elXN/JQgZZ8uYijK6HZjGFHHWkiC8nEHiGO3iyZ3TBLHOMKOlG/2fDqF0sAuY4MYDv1kk4GQg6ZrQx6XZ+A1nBarHEjrvdGPiSsO4c9R61KVkSdAGjJdaPfxxsANNvIHt2m6tB4h8rsvoeQa2esxqtg0EKeW0t4rqJE9IpBwB9M1WXloJbKSJFXdGu7kdcLyD7etTQ3Lva6BKcuJIzZXC58xEQKsD+1Wrjgp4bslWSWC1vpImLxiAXNurjKncobbVjbTrPCsgUrngg9sUKFiitWh3g7EWHLcEgsAAe3SpoUwm3jbvZsAjnnjGKJAsJA3eY9+nsK6zKilm4C10cDmhbm4SNlQ4IzhwSOpGcYomAOiZnYMw52NgDoASBUp2g4Ixn9Khgdd7quNoRADkHkkmpZeh+lccxlwQFXj8zR//AJCnAZIPbPNQM+5dpGdksI/Ujmi4lyVX1YLn68VL45O/BiP9oTy3FoLCFHd44BcFU5O+RsDj6D96xVhHMtlyrq8emGLaQd+4sxxiiPiPUri9f4o1BJJU/wDVzDalWZCLe3UW6Yx24J+9CwzzDS72dpH8U2NsfEzht55zmsXUbnL+p6TSqMYx+aKZ454tFVXSRWa6dyGVgcdMnNHX4A+HNIHQmYn9jQk1zeLpWnyeNIZJZZiSWLFhuIGc1Y3l1c22laO0ci/isUkRkVgeRn8wrndr9SY7af8A8jtXV4ta+HckElbIAD0LBRXPiFTHpkQJIf8AtC547gZPQ0ZcXjHW9LsZre1kjzEY5TH+NGNu7ytnt9Kg1q6tDa2jXVt46ST3HKyGNlIbqMcc1SvugWySSnT/AMpA2pGaPUtFCO43WkJI3EZOw5zzSou/l006np8U9vObhYo/CeOUBNuwkBlIzSqJdLgF490nb/ygKC6g3OzkkHjntXWt7JyZk2lx6e/rUZtUZQ3Ac58rgjP3oB7uaFnCW35OGJ5H3xRLDJ9MynkVWcmCLO29ST2x6VIixy/ljcdulCPqV05BVIgfULn+tTRyTTjbJfiInsFA/cc00sbSplTknyFtYqMHIUEZy7Af1qAxWsZ81yvp5Dn+lL+zHfJN2svpljz+ppDSpUyxXPPbBonFURaJYpo0Pke4cdjnAo0alcKMRqFPqxyaMt9NtooYQy7nbDN1og2lkgJ2KD6mqdgborGbVLhTvaaQYztU4GPoKZBJYxOq3EUokOPIVOa1Gm2kU7ho/wAoYBj0FaJLCwiYMYY2fszqCR9zXPHapMFujM6Pc28c/i2sMuwgRzBVbBXPce1bGI5KkcqfNn044FDeRS6RoiMeu1QAf0qZTjoCMdfQ+4p3TSeP6ZMVyQvkLBIOQcHJyOxqZQrjK/t1BoVWzj+p71xpngYTKCy52snrn09/8qffQslzTDcc7TyQK7sNSQtE6LIrBg4znpn3xUoWh4YTVAhTrxzUZXHWjitQuvWoavhnJtdFdLawO2/e0bZyxXofqDUTXMNo6pNvZZAfDkUjkAfxLR0kBk4Xr6HoayVw001zMrE+WRkwf4QpxgV5D1zRaaEPcUakzf8ATJzyycJPhGmgvYJI2cb2BIGOMBft3qU3NuIpLkEiOIZxnJ3g/lFZz5n5YJbQjLyAkv2j7bj7+lGQskm2MHNrZbc5OfFuOuSfavFuDjz0jbeBNcF9Y6fpsdrgWywrhpSiFtqGQmRtoJ9TTJ9Mn2eLbnxEK7gnR8Y7HvUljcGS2lLYJYEj/CrS0dWgiHsR9Mdq1tD6jlUlFsxc8Xjbr5MVPKY2KEsjjqrgqR9QaG8W4lEhjSSRUyWaNGYLjuStb66tLa5jdZoYpBjpIobpz3qvszFHMkKoqJyu1AAuDxyBxWzl9TWNqMl2Tjnvi2vBhJLxRnJ9vY0OjXzuslvEzHzAZGFIPBGTxV9dWcVvc3CwxIFilcY2g45NQ5cHpgitZS8l2xSRWrp97KSLgoFz5VBLE990nbI6Ae1SfIogOSTzk88k1Y8hAc8n9qbgdTg9aKWVsGOCMfBVm08QFSg25+mMHggjvV1pN7JZ7YLzfJABthnxlosnpL3I96hDqMgACubwQcny9KGGV43aDyYo5I7WjUEJweCmN24EYYHuD05oWzQGTULckbwW1K0x2RwEkGPsKzyahdWQZYR4tuzDxIG6desZ7GrjTLq3vJvmrR/xkYrLG/5kiPADDritKGojlr5MfJppYfyWjtgQKxGZZfykdlUs1GoojVRjjA6Y470M2x5wzgIkET7iDwC+GJH2x+tSWnzMkbliWBPkyBkD1NMrsUl0TSzRQqHcgFiVjUn8z4yB+1U4CylWOwl5HYsQCSSetS3WHmtgSXAnwrHA/wCW+cCkkI2xL3Acg0S7O6CIFBecrgFZAvHHQelEsScCqi1BSe6XdhheSAHtgBRirYDPbqa5ckS4I3AXaQPzTxKf1puoXXyOmateAgNbWdxLHnpv27UOPqRTpAMxDnmdOhPoTVH8byiH4U1dSSPmXtLU4YA7XlDnGfpXSOjyebpqdrN+FfW0LMRgSW5KAt6yKehP6VLPErxy28DyPDJEviQMo8XjoVx1H0rMTbkjSWI+LFjGOd8ZHU+tSWuotEUDO7QZyNrfiwMf4oz/AFFKpxk/qQzc4/ay4l0+C7gtrNGkiltFKrE2ASeuDkdadf2eoS2mjR/IXiNbMHkXw/E3DdnKlTXJvC1aONLifw7jObS9QcSkcESAHrRo1W+0/VLLT1Cz200cQKylgdw6mOTrmqcuGnaHcGobTT5BJriJ9dtNQKTrHCNjxy28qyIQhUZ4I7+tRapD87BpiQPFtV5ZH8RhG3L8+V8GrLUNR1RLW/vNPvDKBdOZ4wuZIF7q6nrj1FcuviHUIm0iGW3tLhLiOFgZoUaVWcgHDYpKpJpr8mi5wkmv7g+oadfz6tYXEELNbpHGrSKykL5GHPOaVXvxFp1uuoadLsCC4hYiOPKDciDkgEUqXlmqlResG65X2YtNaYHDsw/+RA1GxapZvksls5I8wPlJH3qrk+ZhPhalab1P/MA2uO/DLxXU0+0n89pMG7mKYgN+ta9I8yn8lm8Gh3QBFu0LZzugcdcVG2kWDkGO8ZD6TR5/cYoMWdtGQsyzwH1RjtzSaO+hyYb0unGASDx2yDUE1YU2hXRP4FxBIOwVyh/Q0VYaPqqTKbjPhBS2FcsSemKWnx32BLdshxhkCjBGPXFXkF66S7whwoDbe3vVbkukGoPtkZaKEZkI4HGe2Kp7jUI5p0hU53Nge1ai90uLV7Rp7VmilHXHTd6EVhJrTUdMvA88RJjkJJA8rD2oZdcBxrybPTLlY7aaPcFkTD5PGQPStFazpdwh1dcqAT65PtXmsuqyuhaG1dWP8Wcj+lRR6r8QRK7ws0akchMcgfWgxt+TpRPUASqTOCAQSDntTkuIVUs0qBl5ILAcYry+wv8AV9RnaOe7mWLhZPMRuyenFarVNAaS2RtNlK3CoDh2YrKMdDmrmmV1+S7ttc025ma3EgjmZiiI54c542t057VadSA3RRgevvmvDbibUI5pIJgySo21lxhgfY9fpXouh63cW9tBBq05lwqhLgjLgcALJjkgevX1prHkcVUyieNSdxNfveLLIcDqR24qeLUG43DcPbqKCSWN1DqyvE/IZSGU/cU4opyynB6/6FXt3yinrhlwlxFKAVYfQ9aTf+ftVKsjxsCRgjpjuaNhuZG4dcjuc/tXKTJ2oM44PPtgdKp7zSibiW4t9pEmHlVj+RjzkfWrbxEI8v5s4C92PoKSeUDkE5ySMHJNK6vS49XDZlXBfgzz08t2Nmf1eyitrKCSA4uFGZDIuWcSkYY/TsKr7ZjIsVlDkfxTSY4xnJyR3rUXqRNa35MauWiJIOTyMc/aq2xggjCiLb5gBnoCfrXjfX8GPTTisa7XB6L0zUyyY5b3bRbW4EcOxRwEH60XprkiWMnoQ4+/BoZVeMgyEbfqK5a3EaXoUMMSB0HTr715jHGUMkZS4OzR9yEq/Uu2YgZyP86oncpeBxgYccdB196s/G3xsATlSysMAkEfWqK6uYknRd6lyeVVgXA9SBT2rUsijKPjko0eOtyfwE6hABPK4K/iHeen8Qzk1TyiJM7mH0qf4jnuYIbK7DAWjQrDJjcZ3m3fwqgyRjqax+o6vNZPGFtJG3qzZuVeLkHBAz1Fe308J5salFFX7xjxKpvov2eM8Lzj681GWboMD61j5Piq+DbRaW6DnzbpGx9elFaZqupahPPHIYowIRLGUXAzux1Jq9aPIyH6hhXRo8jPmcDPUUi8C5JbOeOoqjtLtnu54ZpTIqo7eIwCou0546fbihFtNQuLt5XIS1KswV2O9ivCsq9AD3NXR0PmTKJepLqKL2W8jDRRKAZJVZo145UEgkkZx0PWgLVtSXWdNligkRI5S0s0b4jWLGDuYHn6U3T42PjysuDtZF4OcA44q306MeDGOMdeR3IzRwwRi7RXk1M5qmX2oaqbVorcRQXFxPmd5FkIhBK7gWA7nHTtURv9RnEW4gRKELRxlUUn1YDk/rVbdqoltWIHMkecDoCGWj4wyxxAgeaLL9sY6U0m7oUrgc89yHt/JlVutvLj+JGHFWCzTbYMhcsx6tk9PYUFdqEj3gAFZLaUfQOoNToQwBGMpKcY9MV0eyZdHLV2N5dFgSxvJ+hBAPHHrV5FkKOvUntWatzKbqeRI2LfOzAhSuCDwfetBbzeIqAh0dTtKsOp571ZB9leQkk5e3/+fP6I1Zr/AGgyWK6BbxXgBiuNShAGSDmOKRsqR9a0xYK8G7I5k5P93H+NV3xLo/8A+oNGurGPb8yjx3FoznaonT+EnHAYEj7j0rpdELhnjUWmafKjHT72MyF1YRznDFc8qDwcfag7jS76xlE3yhMRJDIMOpHcDbzUN3p08EskfhtHNDI6SpyskbqcEMvtWh0LUM20llcgtdRAyQb/ADC7jHLRqW/jHUDvS0fqLnx+hQQzrGZNqyC23AtHnLwsehBPetTYy2109sZtjy25Elu7jllPHlPvQ1xDbCP+0bSBL+ydZBPC2UuI16Haw58voRxQ2nom5ZbWUS2xUyAAjx7Vj1SVB/CfX1FRbXHglfPlB/NhBCzzxQyG7nO587JYnYkoWA6j0rt5ZC8utNug6I1rJG5UnCvGrbhjHema7HFdab43K+FKguCvIUMMLMFH71DLdeDq2k2488M9rbqShyA23AlGOvuO4qv2lB14f+g4svureu1X9fwbP4jPiXmjMXUYt7hwOM5IQZpVX6jzeacrMQY7SRFG0+CpJU4DnnB6r/4pVjZsM1I38GeDgYqHWvFjaK9CzJ1DqAGX6qanezt5Yfm7H8QJ/wAREIEiH2FNX4bhZgTKyjHIVl6/U0da6Ta25BFy4bjnxACw9CBxW20jyiZSm+bGxZdxGQY7hcEH0Oak07wrq/t0cCIg7goPlcjtV5LpGi3DFpXjLnOW8TB/amDSvh2BoyrJvUhg29yQR3zmhaTCUiwljRlUJgknp6Y7YpKkkECs+PM2eRzj2pwl0xQpa4Xy9CASR37U577SvDGZi6rjy4bufpVXtfkteQs9JkkVnRX/AA2Xft96OubW0vQqyIpOOScE1Qx6lpSDcjydMeUEfamtrFghPM/0o1FLhsq3N+ATXdNvNPiS5skSa2Rvx4guWx6jFUrXYugEhtLtSw6GE7QfqK0v9s2WOIZmz64x+ma5/bVsCAtr+pA5rtsKolSmUmlWE7XUKSxvFGpDMxXAYVvvHtVwFddqqFHPpWZbXVXA+VU545bFMOtyvuEdpGSOgGSf0FTGo+SGpMsL/StC1G4W4nVllGDvhOCcfzUHPoYaSJ7a7Yom0+HInXHuKGbWdSxhLROOCQjE/pVtp15LcWhluI2ScOy7GUqGGeozXOMZ9kJyj0Ps4biwiI8VRJM7EAZKk/Q8UQdR1qJC/wAhbXWCRtiuGgk/RwV/eoZlkl2ZA8rBk9qlUyMSkYDNgM4J7+1SpOPCOavscNfdEV7rS7yIkElA8cuD7sABXV+KdHXaGW8i3dzEjDPvhs0ShlKxp4frlSM9aim0zTLkMslsuSeSPKc+vFF7skQscX2IfE+iSlt9xIONo2xSDap6/r3qws9a0q68lrdxuVwu1tybF/mbxABn05rLXPwxDlvlbhgx5CTYI47ZFVMdxd6O0ttNao/iNuJbdz24PIIrv3mS7QUcEG+WepeIuCGztOOSOCDxjPegpLa38RWjYpGrLuQZ2sQc7UHpWFt9WuYFRopZ4g+QqCXK5HBwpOKsoviC/wAETJHIAuFZU2Fc9PynHH0pfO8GoSWaPQxiw5MbbxS7LbVtbZPFgs9viqSJJQAdhPVYw3GfeqSDXrq38NmhSSSMjDlmVjzyTjvVe7LglE8zZY9hzySaG2sxyep4ODzms7Phx6h/VBGljXtRpMvb/wCLdRu2nNmotFlVVkKnfKeMEhzwM+wqjSWRWEiM6y9TICd365zUkNpJJ+TBBZl8pBHl68jii47BAGLvtx22/wCJqcOipbYR4BlqccF2F6dqt5dSS2V3M8zG3le1MjZIAG1kH7EfSm/EXhtZ2Eske/8AE2YztkAePdlD9vSg0W2tbi0u2bBhuAEfPAUq6kY96n1eWSWxsHPheDlSnhurncUOCwHSt/T43CGxnn9TlhOblAzclukaGRWDxFgGYDBRj/C69Qak0pXS62xIZC8LlUHX8wPUkDFNPihty4BZdrblBDL6MD1FWOi27TXsK2r/AC9xNDcIqkBvDPhs2+PfwQSOBjj7Zq+uaEr8l1o+gapdagshiUKXCyM5AhijIxliAAT6KBXodvolpaKcwx3Mjo0crzLjEbDDKnp/X3rNw6Nr0EWleFqMxyyzTEkb22x+IBnHr1q90u8vllvIdSuBIyAOpUDADEqFAX9/rVsoOuGQpqzHX82mWWoappviPGbWbwR4yNhk2rIpDgYPBwabY3lkF8D5i38ZNuU8VN3cdM1n/i65eb4h1tl/DtxdQo00iswQbEQkKOKz9za2s1xGbTUYpCIdzybCj53AAFe5OftilJJKSj5H8bbi5Po9JuWRvl34IV4WJHIwr4qxTDRo2OgZT9M8V5xDFrMahm1CzH4XhkyStnruUFWOOlWNt8Q3VmAlxeaTMFY8ZkD9OcmNsftQbkn2W1KS4RtdQbNs+1TkWrEfVRmnQkY3DO0EE/TGQay5+Lvh6ZPCndon2SIWTxJI+QR1HP7UdYfEHwvLEYzqFujtGq/jNImGUY/M4ArlK3aO2tLktraYx302eA0rtgE8b1DjFaS2kt3USF494G7aGXeARwWAPFZYtp7vFcQXdk8ToFZ47iLbvjPc7uMgig9a/sWKRbzSNatbO+laJL3IM0VywAjRMDj6kelWRlXDAmr5NjPJGsokkYLFCpkkdmwqjGQSTxXbLUrW6kEUBEgflWHII6k/SsqVW/tEfXtTmCLtSG106H5dJdoALbTliwPBJYVBq95bx6BrNjpUD28ZtR4s87mScosi7gOeMjrzRZP4bpgYl7iTXRm/jqXTbv4ivpdNuYTNHFbxXLRkbHnRcMwYcHHAb3FZffJ4iK+Yp0O5WTG1iDkMhFBsTC+7cA6MVwynPHBBxxijw8MsIdgPC2hXCfnil6h4++KU7doclHaqJbS+vtOu5rogyWl03+8jB25J/wCIo9RROpW4szDrukOqo7gXMacrG7DPmXpsb0qOKJpoMFyyoC87DJR4mwomAH2DUTpTC2LWVwVe0mLWzA4w0U3Mbc9weKsX1FDW3iyz0+5t72GK48IC3uCbe6gfzKhY4A57Z6fWohaWiar8q0SrNaPFJZkMRsik5AGOwoTT0m0+XUbJwRGJAy56mKQ7cj6HFWur2kjtpGsxlE+WDWt7uIBZWBdMe+cj7UcoKUOTseRxnSReao0Qv/l3O4LaCeaDAO6Evjenurfs1Kqme/HztnqE0m0pYxwiR0ch8MchtoPUEZ+lKkN8YfTkXJsqGSa34umZtUdtwMr9SOvocULO7xOqgk9Rkk5pUql9GYJZm4OBz1610zPlOF5ODSpVXbLElRodP020urYySb9xIXhuAPYVbx/Dmk/L42y5x+Yuc0qVXLopm66K660+2sihiG4DA2yAMDUlmlpdOUe1gGM8qvJ+uaVKgq5cnbntA9T0+KUDw5JINhwPBwP8KpXsWjKD5u4bLc7iv+ApUqtlwVwkyG6XwpYlDMQcE5J7Ve/C48SXUJ2OXXZGoPICmlSoUWyNMFVfEUAfmHOBmpBGCrEnJpUqIAil3KOGNOsox52ycsxLUqVCSXdmu5CScFVbBFQlAWUknPNKlUvoiPYDKpS4AVjhjzXL2OJiFZFIwB5gDSpUPgJ9mYvtJtH1DTLgF1KzjyKfIcKz8D7URcIojjYcO5JLLxwBnoKVKmMcVKDsqcnGapg0iHzKWJxnk4qwayto7dmQEPvjG4kk880qVDpscXfBZqsk00rCLCGP+ztKOB53APY/iO4bkc1NJaKCdsswGUADMGGMn+YUqVOddCNW+Si1lDBbJyGDPKcFQMFUbByKHtp5DZWVt/yZUhcq3mCuEwWXPr3pUqNMCYo4EkcxsTtCs33HpRekDbrOkSA+YXQUHjoyspFKlRLsp8HrFuzGDTiTyg25HcGIjmobe3jfWb125DwK23A4IfYcH3pUqslxbQK5o8Y+KE8TU/iW6kZmkGo3MUYz5EVZtnA98c1m7Hm8jB6YI9P6UqVKp3kVjz/ksIv1AubwfyzFR9AigUEoB3fWlSpaX3Mfx/Yv0HlFz96nht4n/NnmlSoX0GjQWFjaJtdUG4gc4H1pauir/Z2Ohu7cEHoR4g4IpUqsj2Uy+1m2ubcRCAGSRyJ71Q0hBbAmPeirSxgvlv7WYt4c1jeq5XGceEw7ilSpnUfzmKaZ1hR404L2KyMTujl8Me4IzzXbdmR2Qcq6ebPsuQaVKlEPv/gttHlZWu4f4IXjdD/FslyrxZ/lPfire5sIB49spdUiNwEIPnUIu9cMfTtSpVfEUkwmWMXMFjO5PiT2P4hHctbmQn9Rmre2uJx8PXtyr7ZY9JW9QgDAmTYc4PHc0qVH/wCBXB/xUA2GqXtrYW90pR5JNocSKCp8QgnI9s8UqVKs7UJWn+DVwSdNfk//2Q==" alt="Offer Work Image">
+                    <!-- Container for offering work -->
+                </div>
+
+            </section>
+
+            <footer>
+                <div id="success-container">
+                    <h1>Success Testimonials</h1>
+                    <div class="testimonial">
+                        <img src="https://th.bing.com/th/id/R.d1d1b3866838722dd941b8edd7392063?rik=kMJCcS2ax1EqOQ&riu=http%3a%2f%2fthispix.com%2fwp-content%2fuploads%2f2015%2f06%2fpassport-005.jpg&ehk=u81ai0bHS7k8FLUui%2fuBgrq%2f8J0TTsyHiCybX0YK12Q%3d&risl=&pid=ImgRaw&r=0" alt="John Doe">
+                        <div class="testimonial-info">
+                            <h4>Yash</h4>
+                            <p>Construction Worker</p>
+                            <p>"SEVAK helped me find consistent work opportunities, and I'm grateful for the platform."</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <img src="https://th.bing.com/th/id/OIP.Gw-FTox-QE8DIA8b7UVPEQHaE8?rs=1&pid=ImgDetMain" alt="Jane Smith">
+                        <div class="testimonial-info">
+                            <h4>Mahesh</h4>
+                            <p>Contractor</p>
+                            <p>"I've been able to connect with reliable workers quickly through SEVAK. It's been a game-changer for my business."</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <img src="https://th.bing.com/th/id/OIP.4uz2gQ4IF_T86NDwRuuP6QHaE7?rs=1&pid=ImgDetMain" alt="Jane Smith">
+                        <div class="testimonial-info">
+                            <h4>Arunavalli</h4>
+                            <p>carpenter</p>
+                            <p>I trust SEVAK. It's been a game-changer for my life."</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+            <div class="fixed-bar">
+                <ul>
+                    <li onclick="display('section-dash-board')"><a>Dashboard</a></li>
+                    <li onclick="display('section-notifications')"><a>Notifications</a></li>
+                    <li onclick="display('section-review')"><a>Reviews</a></li>
+                    <li onclick="display('section-work-history')"><a>Work History</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="sectionlogin">
+        <div class="login-body">
+            <button class="back-buttonlogin" style="margin-bottom:570px;" onclick="display('sectionhome')">Back</button>
+            <div class="container">
+
+                <h1 class="form-heading">Login/Sign In</h1>
+                <form id="myForm">
+                    <div class="mb-3 input-container">
+                        <label for="name" class="name-email">Name</label><br>
+                        <input type="text" id="name" class="input-bar" />
+                        <p id="nameErrMsg" class="error-message"></p>
+                    </div>
+                    <div class="mb-3 input-container">
+                        <label for="email" class="name-email">Email</label><br>
+                        <input type="text" id="email" class="input-bar" />
+                        <p id="emailErrMsg" class="error-message"></p>
+                    </div>
+                    <div class="mb-3 input-container">
+                        <label for="status" class="name-email">Working Status</label><br>
+                        <select id="status" class="input-bar">
+                            <option value="Active">Currently Working</option>
+                            <option value="Inactive">Currently Not Working</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 input-container">
+                        <h1 class="name-email">Gender</h1>
+                        <input type="radio" name="gender" id="genderMale" value="Male" checked />
+                        <label for="genderMale">Male</label>
+                        <input type="radio" name="gender" id="genderFemale" value="Female" class="ml-2" />
+                        <label for="genderFemale">Female</label>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-AboutUs">
+        <div class="aboutus-bg" style="color:black;">
+            <section class="about-section">
+                <button class="back-button" onclick="display('sectionhome')">Back</button>
+
+                <div class="container">
+                    <h1 style="text-align:center;">About Us</h1>
+                    <div class="mission">
+                        <h2>Our Mission</h2>
+                        <p>At SEVAK, our mission is simple yet profound: to empower individuals in rural communities by providing them with access to consistent work opportunities while assisting contractors in finding reliable and skilled workers efficiently. By fostering this symbiotic relationship, we aim to uplift livelihoods, strengthen local economies, and foster sustainable development.</p>
+                    </div>
+                    <div class="vision">
+                        <h2>Our Vision</h2>
+                        <p>We envision a future where every individual in rural areas has the opportunity to secure stable employment and where contractors can easily connect with talented workers for their projects. Through our platform, we strive to create a more inclusive and equitable society where everyone has the chance to thrive.</p>
+                    </div>
+                    <div class="offerings">
+                        <h2>What We Offer</h2>
+                        <div class="for-workers">
+                            <h3>For Workers</h3>
+                            <ul>
+                                <li><strong>Access to Opportunities:</strong> We provide a centralized platform where workers can browse and apply for various job listings across different sectors such as construction, agriculture, and more.</li>
+                                <li><strong>Skill Development:</strong> Through our resources and partnerships, we offer training programs and educational materials to help workers enhance their skills and qualifications.</li>
+                                <li><strong>Fair Compensation:</strong> We advocate for fair wages and transparent payment systems to ensure that workers receive adequate compensation for their labor.</li>
+                            </ul>
+                        </div>
+                        <div class="for-contractors">
+                            <h3>For Contractors</h3>
+                            <ul>
+                                <li><strong>Efficient Recruitment:</strong> Our platform streamlines the hiring process, allowing contractors to post job listings, review applications, and connect with qualified workers seamlessly.</li>
+                                <li><strong>Quality Assurance:</strong> We verify the credentials and qualifications of workers to ensure that contractors receive reliable and skilled personnel for their projects.</li>
+                                <li><strong>Cost-Effective Solutions:</strong> By eliminating intermediaries and reducing recruitment costs, we help contractors optimize their expenses while maintaining high-quality standards.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="team">
+                        <h2>Meet the Team</h2>
+                        <p>At SEVAK, we are a passionate and dedicated team committed to driving positive change in rural communities. With a diverse range of expertise spanning technology, business, and social impact, we work tirelessly to improve the lives of individuals and businesses alike.</p>
+                        <ul>
+                            <li><strong>Vinay Kosanam:</strong> As the visionary behind SEVAK, [Founder Name] brings a wealth of experience in [relevant industry/field] and a deep-rooted commitment to social impact. With a vision for empowering rural communities, [Founder Name] founded SEVAK to address the challenges faced by workers and contractors.</li>
+                            <li><strong>Durga Satyaveni Amanchi:</strong> Our team comprises talented individuals with backgrounds in [relevant fields]. From software development and design to marketing and operations, each member plays a crucial role in driving the mission of SEVAK forward.</li>
+                        </ul>
+                    </div>
+                    <div class="contact">
+                        <h2>Get in Touch</h2>
+                        <p>Have questions or feedback? We'd love to hear from you! Contact us at [email address] or [phone number] to learn more about our platform and how you can get involved.</p>
+                        <p>Join us in building a brighter future for rural communities with SEVAK!</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container-allrights">
+                    <p>&copy; 2024 SEVAK. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div id="section-Help">
+        <div class="help-body">
+            <button onclick="display('sectionhome')" class="back-button-h">Back</button>
+            <h1>Help Center</h1>
+
+            <div class="container-help">
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <p>Here are some common questions users ask about SEVAK:</p>
+                <ul>
+                    <li><strong>How do I sign up for an account?</strong><br>
+                        To sign up for an account, click on the "Sign Up" button on the homepage and follow the instructions to
+                        create your profile.</li>
+                    <li><strong>How can I post a job listing?</strong><br>
+                        Posting a job listing is easy! After signing in to your account, go to the "Post a Job" section and fill
+                        out the required details about the job you want to offer.</li>
+                    <li><strong>What payment methods are accepted?</strong><br>
+                        SEVAK accepts various payment methods, including credit/debit cards, PayPal, and bank transfers. You can
+                        choose the payment method that is most convenient for you.</li>
+                    <li><strong>How do I edit my profile information?</strong><br>
+                        You can edit your profile information by going to the "Profile Settings" section after logging in. From
+                        there, you can update your personal details, contact information, and other preferences.</li>
+                    <li><strong>Is SEVAK available in multiple languages?</strong><br>
+                        Currently, SEVAK is available in English only. We are working on adding support for additional languages
+                        in the future to make our platform more accessible to users worldwide.</li>
+                </ul>
+            </div>
+
+            <div class="container-help">
+                <h2>Contact Information</h2>
+                <p>If you need further assistance, feel free to reach out to us:</p>
+                <ul>
+                    <li><strong>Email:</strong> support@sevak.com</li>
+                    <li><strong>Phone:</strong> 1-800-SEVAK</li>
+                </ul>
+            </div>
+
+            <div class="container-help">
+                <h2>Troubleshooting Guides</h2>
+                <p>Having trouble? Check out our troubleshooting guides:</p>
+                <ul>
+                    <li><strong>How to reset your password</strong><br>
+                        If you've forgotten your password, you can reset it by clicking on the "Forgot Password" link on the
+                        login page. Follow the instructions to reset your password and regain access to your account.</li>
+                    <li><strong>Troubleshooting payment issues</strong><br>
+                        If you encounter any issues with payments or transactions on SEVAK, please contact our support team for
+                        assistance. We'll do our best to resolve the issue promptly and ensure a smooth experience for you.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Add more sections as needed -->
+    <div id="section-Find-Cat">
+        <div class="find-body">
+            <div class="find-cat-container">
+                <button onclick="display('sectionhome')" class="back-button-find">Back</button>
+                <h1> Categories</h1>
+                <input type="text" placeholder="Search your skill here....." id="search-bar">
+                <h2 class="choose-head">Choose Your Category to apply</h2>
+                <div class="category-grid">
+                    <div class="category-card" onclick="display('section-Available-Jobs')">
+                        <img src="https://images.pexels.com/photos/10202865/pexels-photo-10202865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Construction">
+                        <h2>Construction Work</h2>
+                    </div>
+                    <div class="category-card" onclick="display('section-Available-Jobs')">
+                        <img src="https://i0.wp.com/gce-group.nl/wp-content/uploads/2019/11/engineer1-1.jpg?fit=1200%2C802&ssl=1" alt="Electrical">
+                        <h2>Electrical</h2>
+                    </div>
+                    <div class="category-card" onclick="display('section-Available-Jobs')">
+                        <img src="https://zeve.au/fixedtoday/uploads/2022/08/plumber-working-on-commercial-plumbing.jpg" alt="Plumbing">
+                        <h2>Plumbing</h2>
+                    </div>
+                    <div class="category-grid" onclick="display('section-Available-Jobs')">
+                        <div class="category-card">
+                            <img src="https://thumbs.dreamstime.com/z/wood-carpenter-work-his-workshop-joiner-s-workspace-man-marking-cuts-pencil-wooden-details-models-boats-128326036.jpg" alt="Construction">
+                            <h2>Carpenter</h2>
+                        </div>
+                        <div class="category-card" onclick="display('section-Available-Jobs')">
+                            <img src="https://th.bing.com/th?id=OIP.OAPejDWP8TuWNcu5VL9DjQHaFH&w=300&h=207&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Electrical">
+                            <h2>Cleaner</h2>
+                        </div>
+                        <div class="category-card" onclick="display('section-Available-Jobs')">
+                            <img src="https://th.bing.com/th?id=OIP.0RWfPMjJvk3f7Qrn1zz_kwAAAA&w=265&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Plumbing">
+                            <h2>Care Taker</h2>
+                        </div>
+                        <div class="category-grid" onclick="display('section-Available-Jobs')">
+                            <div class="category-card">
+                                <img src="https://th.bing.com/th/id/OIP.LMyWOQ4i_fjDEgYMF58hOgHaE9?w=302&h=202&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Construction">
+                                <h2>Meason</h2>
+                            </div>
+                            <div class="category-card" onclick="display('section-Available-Jobs')">
+                                <img src="https://th.bing.com/th/id/OIP.iqkj0AOERRrDnxvfZHiSKQHaEY?w=320&h=189&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Electrical">
+                                <h2>Tutor</h2>
+                            </div>
+                            <div class="category-card" onclick="display('section-Available-Jobs')">
+                                <img src="https://thumbs.dreamstime.com/z/mesh-vector-other-text-abstract-lines-small-circles-form-other-black-carcass-symbols-wire-carcass-d-triangular-mesh-eps-148759964.jpg" alt="Plumbing">
+                                <h2>Other</h2>
+                            </div>
+                            <!-- Add more category cards as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section-Available-Jobs">
+        <div class="avialble-body">
+            <button class="back-button" onclick="display('section-Find-Cat')">Back</button>
+            <div class="container-available">
+
+                <h1>Available jobs for your category</h1>
+                <div class="job-details">
+
+                    <h2>Job Title</h2>
+
+                    <p>Location: City, Country</p>
+                    <button class="apply-btn" onclick="display('section-apply-job')">Apply</button>
+                </div>
+                <div class="job-details">
+
+                    <h2>Job Title</h2>
+
+                    <p>Location: City, Country</p>
+                    <button class="apply-btn" onclick="display('section-apply-job')">Apply</button>
+                </div>
+                <div class="job-details">
+
+                    <h2>Job Title</h2>
+
+                    <p>Location: City, Country</p>
+                    <button class="apply-btn" onclick="display('section-apply-job')">Apply</button>
+                </div>
+                <div class="job-details">
+
+                    <h2>Job Title</h2>
+
+                    <p>Location: City, Country</p>
+                    <button class="apply-btn" onclick="display('section-apply-job')">Apply</button>
+                </div>
+                <div class="job-details">
+
+                    <h2>Job Title</h2>
+
+                    <p>Location: City, Country</p>
+                    <button class="apply-btn" onclick="display('section-apply-job')">Apply</button>
+                </div>
+                <div class="job-details">
+
+                    <h2>Job Title</h2>
+
+                    <p>Location: City, Country</p>
+                    <button class="apply-btn" onclick="display('section-apply-job')">Apply</button>
+                </div>
+                <div class="job-details">
+
+                    <h2>Job Title</h2>
+
+                    <p>Location: City, Country</p>
+                    <button class="apply-btn" onclick="display('section-apply-job')">Apply</button>
+                </div>
+                <div class="job-details">
+
+                    <h2>Job Title</h2>
+
+                    <p>Location: City, Country</p>
+                    <button class="apply-btn" onclick="display('section-apply-job')">Apply</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="section-apply-job">
+        <div class="apply-body">
+            <button class="back-button" onclick="display('section-Available-Jobs')">Back</button>
+            <div class="container-apply">
+                <h1>Apply for Job</h1>
+                <div class="job-details">
+                    <img src="https://th.bing.com/th?id=OIP.EDUUOuXX36d1SXpMaE9aLwHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Job Image" class="job-image">
+                    <div class="details-text">
+                        <h2><b>Job Title</b></h2>
+                        <p><b>Description:</b> You have to work honestly, I can give more wages if I am impressed with your work.</p>
+                        <p><b>Contact Info:</b> John Doe (john@example.com)</p>
+                        <p><b>Location:</b> Tadepalligudem</p>
+                        <button class="apply-button" id="job-apply">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section-Offer-cat">
+        <div class="offer-body">
+            <div class="offer-container">
+                <button class="back-button" onclick="display('sectionhome')">Back</button>
+                <h1> Categories</h1>
+
+                <h2 class="choose-head">Choose Category to OFFER work</h2>
+                <div class="category-grid">
+                    <div class="category-card" onclick="display('section-Offer-job')">
+                        <img src="https://images.pexels.com/photos/10202865/pexels-photo-10202865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Construction">
+                        <h2>Construction Work</h2>
+                    </div>
+                    <div class="category-card" onclick="display('section-Offer-job')">
+                        <img src="https://i0.wp.com/gce-group.nl/wp-content/uploads/2019/11/engineer1-1.jpg?fit=1200%2C802&ssl=1" alt="Electrical">
+                        <h2>Electrical</h2>
+                    </div>
+                    <div class="category-card" onclick="display('section-Offer-job')">
+                        <img src="https://zeve.au/fixedtoday/uploads/2022/08/plumber-working-on-commercial-plumbing.jpg" alt="Plumbing">
+                        <h2>Plumbing</h2>
+                    </div>
+                    <div class="category-grid">
+                        <div class="category-card" onclick="display('section-Offer-job')">
+                            <img src="https://thumbs.dreamstime.com/z/wood-carpenter-work-his-workshop-joiner-s-workspace-man-marking-cuts-pencil-wooden-details-models-boats-128326036.jpg" alt="Construction">
+                            <h2>Carpenter</h2>
+                        </div>
+                        <div class="category-card" onclick="display('section-Offer-job')">
+                            <img src="https://th.bing.com/th?id=OIP.OAPejDWP8TuWNcu5VL9DjQHaFH&w=300&h=207&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Electrical">
+                            <h2>Cleaner</h2>
+                        </div>
+                        <div class="category-card" onclick="display('section-Offer-job')">
+                            <img src="https://th.bing.com/th?id=OIP.0RWfPMjJvk3f7Qrn1zz_kwAAAA&w=265&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Plumbing">
+                            <h2>Care Taker</h2>
+                        </div>
+                        <div class="category-grid">
+                            <div class="category-card" onclick="display('section-Offer-job')">
+                                <img src="https://th.bing.com/th/id/OIP.LMyWOQ4i_fjDEgYMF58hOgHaE9?w=302&h=202&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Construction">
+                                <h2>Meason</h2>
+                            </div>
+                            <div class="category-card" onclick="display('section-Offer-job')">
+                                <img src="https://th.bing.com/th/id/OIP.iqkj0AOERRrDnxvfZHiSKQHaEY?w=320&h=189&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Electrical">
+                                <h2>Tutor</h2>
+                            </div>
+                            <div class="category-card" onclick="display('section-Offer-job')">
+                                <img src="https://thumbs.dreamstime.com/z/mesh-vector-other-text-abstract-lines-small-circles-form-other-black-carcass-symbols-wire-carcass-d-triangular-mesh-eps-148759964.jpg" alt="Plumbing">
+                                <h2>Other</h2>
+                            </div>
+                            <!-- Add more category cards as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section-Offer-job">
+        <div class="offer-job-body">
+            <button class="back-button" onclick="display('section-Offer-cat')">Back</button>
+            <div class="offer-container">
+                <h1>Offer Job</h1>
+                <div class="job-details">
+                    <img src="https://th.bing.com/th/id/OIP._H_A6Wp-TQWv2mUuNMGVlwHaFV?w=268&h=193&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Job Image" class="job-image">
+                    <div class="details-text">
+                        <h2><b>Job Title</b></h2>
+                        <p><b>Description:</b> You have to work honestly, I can give more wages if I am impressed with your work.</p>
+                        <p><b>Contact Info:</b> John Doe (john@example.com)</p>
+                        <p><b>Location:</b> Tadepalligudem</p>
+                        <p><b>Number of Workers Needed:</b>10</p>
+                        <button class="apply-button" id="job-offered">Offer </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section-dash-board">
+        <div class="dashboard-body">
+            <div class="dash-board-container">
+                <div class="dashboard-element ">
+                    <img class="image" src="https://th.bing.com/th?id=OIP.7ERxRfdShxNQLeLwxPc6-AHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Profile Picture">
+                    <div class="element-content">
+                        <div><span class="element-title">Name:</span> John Doe.</div>
+                        <div><span class="element-title">Profession:</span> Construction Field Worker.</div>
+                        <div><span class="element-title">Experience:</span> 10 years</div>
+                        <div><span class="element-title">Mobile Number:</span> 1234567890</div>
+                        <div><span class="element-title">Rating:</span> ★★★★☆</div>
+                    </div>
+                </div>
+                <button class="signout-button">Sign Out</button> <button class="signout-button" style="margin-left:20px" onclick="display('sectionhome')">Back</button>
+            </div>
+        </div>
+    </div>
+    <div id="section-review">
+        <div class="review-body">
+            <button class="back-button" onclick="display('sectionhome')">Back</button>
+            <div class="review-container">
+                <div class="review">
+                    <span class="name">John Doe</span>
+                    <span class="date">March 1, 2024</span>
+                    <div class="rating">★★★★☆</div>
+                    <p> I am a construction field worker. I am giving my honest review on the "SEVAK".</p>
+                    <p class="comment">"SEVAK helped me find consistent work opportunities, and I'm grateful for the platform."
+                    </p>
+                    <H5>THANK YOU</H5>
+                </div>
+
+                <div class="review">
+                    <span class="name">Jane Smith</span>
+                    <span class="date">March 5, 2024</span>
+                    <div class="rating">★★★★★</div>
+                    <p> I am Contractor.</p>
+                    <p class="comment">"I've been able to connect with reliable workers quickly through SEVAK. It's been a game-changer for my business."</p>
+                </div>
+
+                <div class="review">
+                    <span class="name">Alice Johnson</span>
+                    <span class="date">March 10, 2024</span>
+                    <div class="rating">★★★☆☆</div>
+                    <p> I am carpenter</p>
+                    <p class="comment">I trust SEVAK. It's been a game-changer for my life."</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="section-work-history">
+        <div class="history-body">
+            <button class="back-button" onclick="display('sectionhome')">Back</button>
+            <div class="history-container">
+                <div class="work-history">
+                    <div class="job-title">Contractor</div>
+                    <div class="company">SEVAK</div>
+                    <div class="dates">January 2018 - Present</div>
+                    <div class="description">
+                        <p>Mr.Jane Smith works on behlaf of our platform.He is very skilled and smart .</p>
+                        <p></p>He is the 5 rated contarcter on this platform,This is very rare .He is very experienced and has good knowledge enough.
+                    </div>
+                </div>
+                <div class="work-history">
+                    <div class="job-title">Contractor</div>
+                    <div class="company">SEVAK</div>
+                    <div class="dates">January 2018 - Present</div>
+                    <div class="description">
+                        <p>Mr.Jane Smith works on behlaf of our platform.He is very skilled and smart .</p>
+                        <p></p>He is the 5 rated contarcter on this platform,This is very rare .He is very experienced and has good knowledge enough.
+                    </div>
+                </div>
+                <div class="work-history">
+                    <div class="job-title">Contractor</div>
+                    <div class="company">SEVAK</div>
+                    <div class="dates">January 2018 - Present</div>
+                    <div class="description">
+                        <p>Mr.Jane Smith works on behlaf of our platform.He is very skilled and smart .</p>
+                        <p></p>He is the 5 rated contarcter on this platform,This is very rare .He is very experienced and has good knowledge enough.
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div id="section-notifications">
+        <div class="notification-body">
+            <div class="notification" id="notification">
+                <span class="close" onclick="closeNotification()">&times;</span>
+                <p>There is a requirement of the construction worker.........</p>
+            </div>
+            <button onclick="showNotification()" style="height:50px;width:150px;margin-left:500px;margin-top: 100px;background-color:white;color:orange;border-radius: 10px;">Show Notification</button>
+            <button class="back-button" onclick="display('sectionhome')" style="background-color:white;color:orange">Back</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+
+
+
+</body>
+
+</html>
